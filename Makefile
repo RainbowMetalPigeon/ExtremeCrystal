@@ -33,7 +33,7 @@ else
 SHA1 := sha1sum
 endif
 
-RGBDS ?=
+RGBDS ?= ./rgbds/ # updated to use a local version, v0.8.0
 RGBASM  ?= $(RGBDS)rgbasm
 RGBFIX  ?= $(RGBDS)rgbfix
 RGBGFX  ?= $(RGBDS)rgbgfx
