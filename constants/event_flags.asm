@@ -1461,5 +1461,8 @@
 	const EVENT_BATTLE_TOWER_OPEN_CIVILIANS
 ; Unused: next 48 events
 
+; New to Extreme Crystal
+	const EVENT_NEW_TEST
+
 	const_next 2048
 DEF NUM_EVENTS EQU const_value ; 800

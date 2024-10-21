@@ -1077,4 +1077,12 @@ MACRO checkmaplockedmons
 	db checkmaplockedmons_command
 ENDM
 
+; new
+MACRO simpletext
+	db opentext_command
+	db writetext_command
+	dw \1 ; text_pointer
+	db waitbutton_command
+	db closetext_command
+ENDM
 DEF NUM_EVENT_COMMANDS EQU const_value

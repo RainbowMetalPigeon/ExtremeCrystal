@@ -22,50 +22,32 @@ NewBarkTownFlypointCallback:
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	endcallback
 
-NewBarkTown_TeacherStopsYouScene1:
+NewBarkTown_TeacherStopsYouScene1: ; edited
 	playmusic MUSIC_MOM
 	turnobject NEWBARKTOWN_TEACHER, LEFT
-	opentext
-	writetext Text_WaitPlayer
-	waitbutton
-	closetext
+	simpletext Text_WaitPlayer
 	turnobject PLAYER, RIGHT
 	applymovement NEWBARKTOWN_TEACHER, NewBarkTown_TeacherRunsToYouMovement1
-	opentext
-	writetext Text_WhatDoYouThinkYoureDoing
-	waitbutton
-	closetext
+	simpletext Text_WhatDoYouThinkYoureDoing
 	follow NEWBARKTOWN_TEACHER, PLAYER
 	applymovement NEWBARKTOWN_TEACHER, NewBarkTown_TeacherBringsYouBackMovement1
 	stopfollow
-	opentext
-	writetext Text_ItsDangerousToGoAlone
-	waitbutton
-	closetext
+	simpletext Text_ItsDangerousToGoAlone
 	special RestartMapMusic
 	end
 
-NewBarkTown_TeacherStopsYouScene2:
+NewBarkTown_TeacherStopsYouScene2: ; edited
 	playmusic MUSIC_MOM
 	turnobject NEWBARKTOWN_TEACHER, LEFT
-	opentext
-	writetext Text_WaitPlayer
-	waitbutton
-	closetext
+	simpletext Text_WaitPlayer
 	turnobject PLAYER, RIGHT
 	applymovement NEWBARKTOWN_TEACHER, NewBarkTown_TeacherRunsToYouMovement2
 	turnobject PLAYER, UP
-	opentext
-	writetext Text_WhatDoYouThinkYoureDoing
-	waitbutton
-	closetext
+	simpletext Text_WhatDoYouThinkYoureDoing
 	follow NEWBARKTOWN_TEACHER, PLAYER
 	applymovement NEWBARKTOWN_TEACHER, NewBarkTown_TeacherBringsYouBackMovement2
 	stopfollow
-	opentext
-	writetext Text_ItsDangerousToGoAlone
-	waitbutton
-	closetext
+	simpletext Text_ItsDangerousToGoAlone
 	special RestartMapMusic
 	end
 
@@ -104,16 +86,29 @@ NewBarkTownTeacherScript:
 NewBarkTownFisherScript:
 	jumptextfaceplayer Text_ElmDiscoveredNewMon
 
-NewBarkTownRivalScript:
-	opentext
-	writetext NewBarkTownRivalText1
-	waitbutton
-	closetext
+NewBarkTown_RivalExitsLabScene: ; new
+	checkevent EVENT_NEW_TEST
+	iftrue .done
+	setevent EVENT_NEW_TEST
+; rival appears
+	playsound SFX_EXIT_BUILDING
+	appear NEWBARKTOWN_RIVAL
+	turnobject PLAYER, UP
+	pause 7
+	showemote EMOTE_SHOCK, PLAYER, 15
+	simpletext NewBarkTownRivalText1
+	playsound SFX_TACKLE
+	applymovement PLAYER, NewBarkTown_RivalShovesYouOutMovement
+	applymovement NEWBARKTOWN_RIVAL, NewBarkTown_RivalEscapesOutMovement1
+	turnobject PLAYER, LEFT
+	applymovement NEWBARKTOWN_RIVAL, NewBarkTown_RivalEscapesOutMovement2
+	disappear NEWBARKTOWN_RIVAL
+.done
+	end
+NewBarkTownRivalScript: ; edited
+	simpletext NewBarkTownRivalText1
 	turnobject NEWBARKTOWN_RIVAL, LEFT
-	opentext
-	writetext NewBarkTownRivalText2
-	waitbutton
-	closetext
+	simpletext NewBarkTownRivalText2
 	follow PLAYER, NEWBARKTOWN_RIVAL
 	applymovement PLAYER, NewBarkTown_RivalPushesYouAwayMovement
 	stopfollow
@@ -170,7 +165,7 @@ NewBarkTown_TeacherBringsYouBackMovement2:
 	turn_head LEFT
 	step_end
 
-NewBarkTown_RivalPushesYouAwayMovement:
+NewBarkTown_RivalPushesYouAwayMovement: ; TBE
 	turn_head UP
 	step DOWN
 	step_end
@@ -182,7 +177,20 @@ NewBarkTown_RivalShovesYouOutMovement:
 	remove_fixed_facing
 	step_end
 
-NewBarkTown_RivalReturnsToTheShadowsMovement:
+NewBarkTown_RivalEscapesOutMovement1: ; new
+	step DOWN
+	step LEFT
+	step LEFT
+	step DOWN
+	step_end
+
+NewBarkTown_RivalEscapesOutMovement2: ; new
+	step DOWN
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
+NewBarkTown_RivalReturnsToTheShadowsMovement: ; TBE
 	step RIGHT
 	step_end
 
@@ -246,12 +254,8 @@ Text_ElmDiscoveredNewMon:
 	cont "new #MON."
 	done
 
-NewBarkTownRivalText1:
-	text "<……>"
-
-	para "So this is the"
-	line "famous ELM #MON"
-	cont "LAB…"
+NewBarkTownRivalText1: ; edited
+	text "GET THE FUCK OUT!"
 	done
 
 NewBarkTownRivalText2:
@@ -291,6 +295,7 @@ NewBarkTown_MapEvents:
 	def_coord_events
 	coord_event  1,  8, SCENE_NEWBARKTOWN_TEACHER_STOPS_YOU, NewBarkTown_TeacherStopsYouScene1
 	coord_event  1,  9, SCENE_NEWBARKTOWN_TEACHER_STOPS_YOU, NewBarkTown_TeacherStopsYouScene2
+	coord_event  6,  4, SCENE_NEWBARKTOWN_TEACHER_STOPS_YOU, NewBarkTown_RivalExitsLabScene ; TBE
 
 	def_bg_events
 	bg_event  8,  8, BGEVENT_READ, NewBarkTownSign
@@ -301,4 +306,4 @@ NewBarkTown_MapEvents:
 	def_object_events
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
-	object_event  3,  2, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
+	object_event  6,  3, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN

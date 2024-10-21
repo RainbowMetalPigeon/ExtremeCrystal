@@ -614,6 +614,9 @@ InitializeEventsScript:
 	setevent EVENT_SAFFRON_TRAIN_STATION_POPULATION
 	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
 	setevent EVENT_INITIALIZED_EVENTS
+; new
+	setevent EVENT_RIVAL_NEW_BARK_TOWN
+; back to vanilla
 	endcallback
 
 AskNumber1MScript:
