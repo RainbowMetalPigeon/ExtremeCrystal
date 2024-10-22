@@ -70,4 +70,6 @@ TrainerPicPointers::
 	dba OfficerPic
 	dba GruntfPic
 	dba MysticalmanPic
+; new
+	dba ProfElmPic
 	assert_table_length NUM_TRAINER_CLASSES

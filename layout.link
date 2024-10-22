@@ -63,7 +63,7 @@ ROMX $0d
 	"Effect Commands"
 ROMX $0e
 	"Enemy Trainers"
-	"Enemy Trainer Parties 2"
+;	"Enemy Trainer Parties 2" ; edited, commented as it does not NEED to be here: https://discord.com/channels/442462691542695948/487424856913346580/1129527827667095592
 ROMX $0f
 	"Battle Core"
 ROMX $10

@@ -5274,3 +5274,30 @@ MysticalmanGroup:
 	db -1 ; end
 
 	end_list_items
+
+; new -------------------------------------------------------------
+
+ProfElmGroup:
+	next_list_item ; PROF_ELM (1)
+	db "ELM@", TRAINERTYPE_MOVES
+	db 100
+	dw MEGANIUM
+	dw SPLASH, SPLASH, SPLASH, SPLASH
+	db 100
+	dw TYPHLOSION
+	dw SPLASH, SPLASH, SPLASH, SPLASH
+	db 100
+	dw FERALIGATR
+	dw SPLASH, SPLASH, SPLASH, SPLASH
+	db 100
+	dw HO_OH
+	dw SPLASH, SPLASH, SPLASH, SPLASH
+	db 100
+	dw LUGIA
+	dw SPLASH, SPLASH, SPLASH, SPLASH
+	db 100
+	dw CELEBI
+	dw SPLASH, SPLASH, SPLASH, SPLASH
+	db -1 ; end
+
+	end_list_items

@@ -70,4 +70,6 @@ TrainerGroups:
 	dba OfficerGroup
 	dba GruntFGroup
 	dba MysticalmanGroup
+; new
+	dba ProfElmGroup
 	assert_table_length NUM_TRAINER_CLASSES

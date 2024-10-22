@@ -1,5 +1,6 @@
 TrainerClassDVs:
 ; entries correspond to trainer classes (see constants/trainer_constants.asm)
+; TBE: all 15?
 	table_width 2, TrainerClassDVs
 	;  atk,def,spd,spc
 	dn  9, 10,  7,  7 ; FALKNER
@@ -70,4 +71,6 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; OFFICER
 	dn  7, 14, 10,  8 ; GRUNTF
 	dn  9,  8,  8,  8 ; MYSTICALMAN
+; new
+	dn 15, 15, 15, 15 ; PROF_ELM
 	assert_table_length NUM_TRAINER_CLASSES

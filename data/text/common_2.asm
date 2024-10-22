@@ -1499,14 +1499,14 @@ _MayRegisterItemText::
 	line "on SELECT Button."
 	done
 
-_OakText1::
+_OakText1:: ; edited
 	text "Hello! Sorry to"
 	line "keep you waiting!"
 
 	para "Welcome to the"
 	line "world of #MON!"
 
-	para "My name is OAK."
+	para "My name is ELM."
 
 	para "People call me the"
 	line "#MON PROF."
