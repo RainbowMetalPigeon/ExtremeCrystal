@@ -92,9 +92,11 @@ NewBarkTown_RivalExitsLabScene: ; new
 	setevent EVENT_NEW_TEST
 ; rival appears
 	playsound SFX_EXIT_BUILDING
+	special FadeOutMusic
 	appear NEWBARKTOWN_RIVAL
 	turnobject PLAYER, UP
 	pause 7
+	playmusic MUSIC_RIVAL_ENCOUNTER
 	showemote EMOTE_SHOCK, PLAYER, 15
 	simpletext NewBarkTownRivalText1
 	playsound SFX_TACKLE
@@ -103,9 +105,12 @@ NewBarkTown_RivalExitsLabScene: ; new
 	turnobject PLAYER, LEFT
 	applymovement NEWBARKTOWN_RIVAL, NewBarkTown_RivalEscapesOutMovement2
 	disappear NEWBARKTOWN_RIVAL
+	special FadeOutMusic
+	pause 7
+	special RestartMapMusic
 .done
 	end
-NewBarkTownRivalScript: ; edited
+NewBarkTownRivalScript: ; unused
 	simpletext NewBarkTownRivalText1
 	turnobject NEWBARKTOWN_RIVAL, LEFT
 	simpletext NewBarkTownRivalText2
@@ -258,7 +263,7 @@ NewBarkTownRivalText1: ; edited
 	text "GET THE FUCK OUT!"
 	done
 
-NewBarkTownRivalText2:
+NewBarkTownRivalText2: ; unused
 	text "…What are you"
 	line "staring at?"
 	done
@@ -306,4 +311,4 @@ NewBarkTown_MapEvents:
 	def_object_events
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
-	object_event  6,  3, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
+	object_event  6,  3, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN ; TBE?
