@@ -1462,7 +1462,7 @@
 ; Unused: next 48 events
 
 ; New to Extreme Crystal
-	const EVENT_NEW_TEST
+	const EVENT_RIVAL_ESCAPES_FROM_LAB
 
 	const_next 2048
 DEF NUM_EVENTS EQU const_value ; 800
