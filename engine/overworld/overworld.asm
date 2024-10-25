@@ -117,7 +117,7 @@ AddIndoorSprites:
 	jr nz, .loop
 	ret
 
-AddOutdoorSprites:
+AddOutdoorSprites: ; edited to improve outdoor sprite system
 	ld a, [wMapGroup]
 	dec a
 	ld c, a
@@ -128,15 +128,18 @@ AddOutdoorSprites:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld c, MAX_OUTDOOR_SPRITES
+;	ld c, MAX_OUTDOOR_SPRITES
 .loop
-	push bc
+;	push bc
 	ld a, [hli]
+	and a ; new
+	ret z ; new
 	call AddSpriteGFX
-	pop bc
-	dec c
-	jr nz, .loop
-	ret
+;	pop bc
+;	dec c
+;	jr nz, .loop
+;	ret
+	jr .loop ; new
 
 LoadUsedSpritesGFX:
 	ld a, MAPCALLBACK_SPRITES
@@ -305,9 +308,9 @@ _GetSpritePalette::
 	ld c, a
 	ret
 
-LoadAndSortSprites:
+LoadAndSortSprites: ; edited to improve outdoor sprite system
 	call LoadSpriteGFX
-	call SortUsedSprites
+;	call SortUsedSprites
 	call ArrangeUsedSprites
 	ret
 
@@ -349,7 +352,7 @@ AddSpriteGFX:
 	and a
 	ret
 
-LoadSpriteGFX:
+LoadSpriteGFX: ; bug already fixed
 	ld hl, wUsedSprites
 	ld b, SPRITE_GFX_LIST_CAPACITY
 .loop
@@ -373,75 +376,76 @@ LoadSpriteGFX:
 	ld a, l
 	ret
 
-SortUsedSprites:
-; Bubble-sort sprites by type.
-
-; Run backwards through wUsedSprites to find the last one.
-
-	ld c, SPRITE_GFX_LIST_CAPACITY
-	ld de, wUsedSprites + (SPRITE_GFX_LIST_CAPACITY - 1) * 2
-.FindLastSprite:
-	ld a, [de]
-	and a
-	jr nz, .FoundLastSprite
-	dec de
-	dec de
-	dec c
-	jr nz, .FindLastSprite
-.FoundLastSprite:
-	dec c
-	jr z, .quit
-
-; If the length of the current sprite is
-; higher than a later one, swap them.
-
-	inc de
-	ld hl, wUsedSprites + 1
-
-.CheckSprite:
-	push bc
-	push de
-	push hl
-
-.CheckFollowing:
-	ld a, [de]
-	cp [hl]
-	jr nc, .loop
-
-; Swap the two sprites.
-
-	ld b, a
-	ld a, [hl]
-	ld [hl], b
-	ld [de], a
-	dec de
-	dec hl
-	ld a, [de]
-	ld b, a
-	ld a, [hl]
-	ld [hl], b
-	ld [de], a
-	inc de
-	inc hl
-
-; Keep doing this until everything's in order.
-
-.loop
-	dec de
-	dec de
-	dec c
-	jr nz, .CheckFollowing
-
-	pop hl
-	inc hl
-	inc hl
-	pop de
-	pop bc
-	dec c
-	jr nz, .CheckSprite
-
-.quit
-	ret
+; edited, commented out to improve outdoor sprite system
+;SortUsedSprites:
+;; Bubble-sort sprites by type.
+;
+;; Run backwards through wUsedSprites to find the last one.
+;
+;	ld c, SPRITE_GFX_LIST_CAPACITY
+;	ld de, wUsedSprites + (SPRITE_GFX_LIST_CAPACITY - 1) * 2
+;.FindLastSprite:
+;	ld a, [de]
+;	and a
+;	jr nz, .FoundLastSprite
+;	dec de
+;	dec de
+;	dec c
+;	jr nz, .FindLastSprite
+;.FoundLastSprite:
+;	dec c
+;	jr z, .quit
+;
+;; If the length of the current sprite is
+;; higher than a later one, swap them.
+;
+;	inc de
+;	ld hl, wUsedSprites + 1
+;
+;.CheckSprite:
+;	push bc
+;	push de
+;	push hl
+;
+;.CheckFollowing:
+;	ld a, [de]
+;	cp [hl]
+;	jr nc, .loop
+;
+;; Swap the two sprites.
+;
+;	ld b, a
+;	ld a, [hl]
+;	ld [hl], b
+;	ld [de], a
+;	dec de
+;	dec hl
+;	ld a, [de]
+;	ld b, a
+;	ld a, [hl]
+;	ld [hl], b
+;	ld [de], a
+;	inc de
+;	inc hl
+;
+;; Keep doing this until everything's in order.
+;
+;.loop
+;	dec de
+;	dec de
+;	dec c
+;	jr nz, .CheckFollowing
+;
+;	pop hl
+;	inc hl
+;	inc hl
+;	pop de
+;	pop bc
+;	dec c
+;	jr nz, .CheckSprite
+;
+;.quit
+;	ret
 
 ArrangeUsedSprites:
 ; Get the length of each sprite and space them out in VRAM.
