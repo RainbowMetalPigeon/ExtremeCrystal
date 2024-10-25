@@ -77,10 +77,12 @@ TilesetForestAnim:
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 
-TilesetJohtoAnim:
+TilesetJohtoAnim: ; edited, TBV
 	dw vTiles2 tile $14, AnimateWaterTile
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
+	dw vTiles2 tile $20, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileDown
+	dw wTileAnimBuffer, ScrollTileDown
+	dw vTiles2 tile $20, WriteTileFromAnimBuffer
 	dw NULL,  AnimateWaterPalette
 	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateFlowerTile
@@ -88,7 +90,10 @@ TilesetJohtoAnim:
 	dw WhirlpoolFrames2, AnimateWhirlpoolTile
 	dw WhirlpoolFrames3, AnimateWhirlpoolTile
 	dw WhirlpoolFrames4, AnimateWhirlpoolTile
-	dw NULL,  WaitTileAnimation
+	dw vTiles2 tile $20, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileDown
+	dw wTileAnimBuffer, ScrollTileDown
+	dw vTiles2 tile $20, WriteTileFromAnimBuffer
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 

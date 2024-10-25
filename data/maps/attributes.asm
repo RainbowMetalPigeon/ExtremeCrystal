@@ -97,9 +97,10 @@ MACRO connection
 ENDM
 
 
-	map_attributes NewBarkTown, NEW_BARK_TOWN, $05, WEST | EAST
+	map_attributes NewBarkTown, NEW_BARK_TOWN, $05, SOUTH | WEST | EAST ; edited
 	connection west, Route29, ROUTE_29, 0
 	connection east, Route27, ROUTE_27, 0
+	connection south, Route119, ROUTE_119, 0 ; new
 
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35, NORTH | EAST
 	connection north, Route30, ROUTE_30, 5
@@ -695,3 +696,9 @@ ENDM
 	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
+
+; new maps
+
+	map_attributes Route119, ROUTE_119, $05, NORTH
+	connection north, NewBarkTown, NEW_BARK_TOWN, 0
+

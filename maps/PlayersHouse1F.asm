@@ -34,8 +34,103 @@ MeetMomRightScript:
 	applymovement PLAYERSHOUSE1F_MOM1, MomWalksToPlayerMovement
 MeetMomScript:
 	opentext
-	writetext ElmsLookingForYouText
-	promptbutton
+
+; new temporary debug stuff ---------------------------------
+
+	givepoke MEW, 42
+	givepoke MEW, 42
+
+	setflag ENGINE_ZEPHYRBADGE
+	setflag ENGINE_HIVEBADGE
+	setflag ENGINE_PLAINBADGE
+	setflag ENGINE_FOGBADGE
+	setflag ENGINE_STORMBADGE
+	setflag ENGINE_MINERALBADGE
+	setflag ENGINE_GLACIERBADGE
+	setflag ENGINE_RISINGBADGE
+	setflag ENGINE_BOULDERBADGE
+	setflag ENGINE_CASCADEBADGE
+	setflag ENGINE_THUNDERBADGE
+	setflag ENGINE_RAINBOWBADGE
+	setflag ENGINE_MARSHBADGE
+	setflag ENGINE_SOULBADGE
+	setflag ENGINE_VOLCANOBADGE
+	setflag ENGINE_EARTHBADGE
+	setevent EVENT_BEAT_FALKNER
+	setevent EVENT_BEAT_BUGSY
+	setevent EVENT_BEAT_WHITNEY
+	setevent EVENT_BEAT_MORTY
+	setevent EVENT_BEAT_CHUCK
+	setevent EVENT_BEAT_JASMINE
+	setevent EVENT_BEAT_PRYCE
+	setevent EVENT_BEAT_CLAIR
+	setevent EVENT_BEAT_BROCK
+	setevent EVENT_BEAT_MISTY
+	setevent EVENT_BEAT_LTSURGE
+	setevent EVENT_BEAT_ERIKA
+	setevent EVENT_BEAT_JANINE
+	setevent EVENT_BEAT_SABRINA
+	setevent EVENT_BEAT_BLAINE
+	setevent EVENT_BEAT_BLUE
+	setevent EVENT_BEAT_ELITE_FOUR
+
+	setflag ENGINE_FLYPOINT_NEW_BARK
+	setflag ENGINE_FLYPOINT_CHERRYGROVE
+	setflag ENGINE_FLYPOINT_VIOLET
+	setflag ENGINE_FLYPOINT_AZALEA
+	setflag ENGINE_FLYPOINT_GOLDENROD
+	setflag ENGINE_FLYPOINT_ECRUTEAK
+	setflag ENGINE_FLYPOINT_OLIVINE
+	setflag ENGINE_FLYPOINT_CIANWOOD
+	setflag ENGINE_FLYPOINT_MAHOGANY
+	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
+	setflag ENGINE_FLYPOINT_BLACKTHORN
+	setflag ENGINE_FLYPOINT_SILVER_CAVE
+	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+	setflag ENGINE_FLYPOINT_PALLET
+	setflag ENGINE_FLYPOINT_VIRIDIAN
+	setflag ENGINE_FLYPOINT_PEWTER
+	setflag ENGINE_FLYPOINT_CERULEAN
+	setflag ENGINE_FLYPOINT_VERMILION
+	setflag ENGINE_FLYPOINT_CELADON
+	setflag ENGINE_FLYPOINT_ROCK_TUNNEL
+	setflag ENGINE_FLYPOINT_LAVENDER
+	setflag ENGINE_FLYPOINT_FUCHSIA
+	setflag ENGINE_FLYPOINT_SAFFRON
+	setflag ENGINE_FLYPOINT_CINNABAR
+
+	giveitem HM_CUT
+	giveitem HM_FLY
+	giveitem HM_SURF
+	giveitem HM_STRENGTH
+	giveitem HM_FLASH
+	giveitem HM_WHIRLPOOL
+	giveitem HM_WATERFALL
+	giveitem TM_ROCK_SMASH, 99
+
+;	ld a, FLY
+;	ld [wPartyMon1Moves], a
+
+;	loadmem wPartyMon1Moves+0, FLY
+;	loadmem wPartyMon1Moves+1, FLASH
+;	loadmem wPartyMon1Moves+2, CUT
+;	loadmem wPartyMon1Moves+3, STRENGTH
+;
+;	loadmem wPartyMon2Moves+0, SURF
+;	loadmem wPartyMon2Moves+1, ROCK_SMASH
+;	loadmem wPartyMon2Moves+2, WHIRLPOOL
+;	loadmem wPartyMon2Moves+3, WATERFALL
+
+	setflag ENGINE_POKEGEAR
+	setflag ENGINE_PHONE_CARD
+	setflag ENGINE_MAP_CARD
+	setflag ENGINE_RADIO_CARD
+	setflag ENGINE_EXPN_CARD
+
+; back to vanilla -------------------------------------------
+	
+;	writetext ElmsLookingForYouText
+;	promptbutton
 	getstring STRING_BUFFER_4, PokegearName
 	scall PlayersHouse1FReceiveItemStd
 	setflag ENGINE_POKEGEAR
@@ -44,11 +139,11 @@ MeetMomScript:
 	setscene SCENE_PLAYERSHOUSE1F_NOOP
 	setevent EVENT_PLAYERS_HOUSE_MOM_1
 	clearevent EVENT_PLAYERS_HOUSE_MOM_2
-	writetext MomGivesPokegearText
-	promptbutton
+;	writetext MomGivesPokegearText
+;	promptbutton
 	special SetDayOfWeek
 .SetDayOfWeek:
-	writetext IsItDSTText
+;	writetext IsItDSTText
 	yesorno
 	iffalse .WrongDay
 	special InitialSetDSTFlag
@@ -61,24 +156,24 @@ MeetMomScript:
 	yesorno
 	iffalse .SetDayOfWeek
 .DayOfWeekDone:
-	writetext ComeHomeForDSTText
+;	writetext ComeHomeForDSTText
 	yesorno
 	iffalse .ExplainPhone
 	sjump .KnowPhone
 
 .KnowPhone:
-	writetext KnowTheInstructionsText
-	promptbutton
+;	writetext KnowTheInstructionsText
+;	promptbutton
 	sjump .FinishPhone
 
 .ExplainPhone:
-	writetext DontKnowTheInstructionsText
-	promptbutton
+;	writetext DontKnowTheInstructionsText
+;	promptbutton
 	sjump .FinishPhone
 
 .FinishPhone:
-	writetext InstructionsNextText
-	waitbutton
+;	writetext InstructionsNextText
+;	waitbutton
 	closetext
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .FromRight
@@ -124,8 +219,8 @@ MomScript:
 	iftrue .GaveMysteryEgg
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue .GotAPokemon
-	writetext HurryUpElmIsWaitingText
-	waitbutton
+;	writetext HurryUpElmIsWaitingText
+;	waitbutton
 	closetext
 	end
 
@@ -223,9 +318,8 @@ ElmsLookingForYouText:
 
 	para "Oh! I almost for-"
 	line "got! Your #MON"
-
-	para "GEAR is back from"
-	line "the repair shop."
+	cont "GEAR is back from"
+	cont "the repair shop."
 
 	para "Here you go!"
 	done
