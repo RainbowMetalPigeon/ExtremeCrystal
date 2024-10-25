@@ -134,21 +134,33 @@ ClairGroup:
 
 	end_list_items
 
-Rival1Group:
+Rival1Group: ; edited
 	next_list_item ; RIVAL1 (1)
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
-	db -1 ; end
-
-	next_list_item ; RIVAL1 (2)
-	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CYNDAQUIL
+	db 5
+	dw TOTODILE
 	db -1 ; end
 
-	next_list_item ; RIVAL1 (3)
+	next_list_item ; RIVAL1 (2) ; TBE
 	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db 5
+	dw CYNDAQUIL
+	db 5
+	dw TOTODILE
+	db -1 ; end
+
+	next_list_item ; RIVAL1 (3) ; TBE
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db 5
+	dw CYNDAQUIL
 	db 5
 	dw TOTODILE
 	db -1 ; end

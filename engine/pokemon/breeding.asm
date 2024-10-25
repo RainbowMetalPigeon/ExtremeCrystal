@@ -241,27 +241,28 @@ HatchEggs:
 	ld [wCurPartySpecies], a
 	call SetSeenAndCaughtMon
 
+	; TBE with Wynaut when I add it
 	ld a, [wCurPartySpecies]
 	call GetPokemonIndexFromID
 	ld a, l
-	sub LOW(TOGEPI)
-	if HIGH(TOGEPI) == 0
+	sub LOW(WOBBUFFET)
+	if HIGH(WOBBUFFET) == 0
 		or h
 	else
-		jr nz, .nottogepi
-		if HIGH(TOGEPI) == 1
+		jr nz, .notwynaut
+		if HIGH(WOBBUFFET) == 1
 			dec h
 		else
 			ld a, h
-			cp HIGH(TOGEPI)
+			cp HIGH(WOBBUFFET)
 		endc
 	endc
-	jr nz, .nottogepi
-	; set the event flag for hatching togepi
-	ld de, EVENT_TOGEPI_HATCHED
+	jr nz, .notwynaut
+	; set the event flag for hatching wynaut
+	ld de, EVENT_WYNAUT_HATCHED
 	ld b, SET_FLAG
 	call EventFlagAction
-.nottogepi
+.notwynaut
 
 	pop de
 

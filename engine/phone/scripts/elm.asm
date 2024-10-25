@@ -1,14 +1,14 @@
 ElmPhoneCalleeScript:
 	readvar VAR_SPECIALPHONECALL
 	ifequal SPECIALCALL_POKERUS, .pokerus
-	checkevent EVENT_SHOWED_TOGEPI_TO_ELM
+	checkevent EVENT_SHOWED_WYNAUT_TO_ELM
 	iftrue .discovery
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
+	checkevent EVENT_GOT_WYNAUT_EGG_FROM_MX_POKEMON
 	iffalse .next
-	checkevent EVENT_TOGEPI_HATCHED
+	checkevent EVENT_WYNAUT_HATCHED
 	iftrue .egghatched
 .next
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
+	checkevent EVENT_GOT_WYNAUT_EGG_FROM_MX_POKEMON
 	iftrue .eggunhatched
 	checkevent EVENT_ELMS_AIDE_IN_LAB
 	iftrue .assistant
@@ -43,7 +43,7 @@ ElmPhoneCalleeScript:
 
 .egghatched
 	farwritetext ElmPhoneEggHatchedText
-	setevent EVENT_TOLD_ELM_ABOUT_TOGEPI_OVER_THE_PHONE
+	setevent EVENT_TOLD_ELM_ABOUT_WYNAUT_OVER_THE_PHONE
 	end
 
 .discovery

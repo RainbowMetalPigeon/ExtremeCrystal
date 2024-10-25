@@ -422,26 +422,26 @@ IgglybuffEvosAttacks:
 	dbw 14, SWEET_KISS
 	db 0 ; no more level-up moves
 
-TogepiEvosAttacks:
+TogepiEvosAttacks: ; edited, TBE
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, TOGETIC
 	db 0 ; no more evolutions
-	dbw 1, GROWL
 	dbw 1, CHARM
-	dbw 7, METRONOME
-	dbw 18, SWEET_KISS
+	dbw 1, METRONOME
+	dbw 7, SAFEGUARD
+	dbw 10, GROWL
+	dbw 15, SWEET_KISS
 	dbw 25, ENCORE
-	dbw 31, SAFEGUARD
 	dbw 38, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
-TogeticEvosAttacks:
+TogeticEvosAttacks: ; edited, TBE
 	db 0 ; no more evolutions
-	dbw 1, GROWL
 	dbw 1, CHARM
-	dbw 7, METRONOME
-	dbw 18, SWEET_KISS
+	dbw 1, METRONOME
+	dbw 7, SAFEGUARD
+	dbw 10, GROWL
+	dbw 15, SWEET_KISS
 	dbw 25, ENCORE
-	dbw 31, SAFEGUARD
 	dbw 38, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
