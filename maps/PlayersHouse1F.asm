@@ -37,7 +37,7 @@ MeetMomScript:
 
 ; new temporary debug stuff ---------------------------------
 
-	givepoke MEW, 42
+	givepoke CELEBI, 42
 	givepoke MEW, 42
 
 	setflag ENGINE_ZEPHYRBADGE
@@ -110,6 +110,11 @@ MeetMomScript:
 
 ;	ld a, FLY
 ;	ld [wPartyMon1Moves], a
+
+	callasm .asm_give_moves
+
+;	loadmem wPartyMon1Moves+0, 0
+;	loadmem wPartyMon1Moves+1, FLY
 
 ;	loadmem wPartyMon1Moves+0, FLY
 ;	loadmem wPartyMon1Moves+1, FLASH
@@ -193,6 +198,33 @@ MeetMomScript:
 	special RestartMapMusic
 	turnobject PLAYERSHOUSE1F_MOM1, LEFT
 	end
+
+.asm_give_moves:
+	ld hl, FLY
+	call GetMoveIDFromIndex
+	ld [wPartyMon1Moves+0], a
+	ld hl, CUT
+	call GetMoveIDFromIndex
+	ld [wPartyMon1Moves+1], a
+	ld hl, STRENGTH
+	call GetMoveIDFromIndex
+	ld [wPartyMon1Moves+2], a
+	ld hl, ROCK_SMASH
+	call GetMoveIDFromIndex
+	ld [wPartyMon1Moves+3], a
+	ld hl, SURF
+	call GetMoveIDFromIndex
+	ld [wPartyMon2Moves+0], a
+	ld hl, WHIRLPOOL
+	call GetMoveIDFromIndex
+	ld [wPartyMon2Moves+1], a
+	ld hl, WATERFALL
+	call GetMoveIDFromIndex
+	ld [wPartyMon2Moves+2], a
+	ld hl, FLASH
+	call GetMoveIDFromIndex
+	ld [wPartyMon2Moves+3], a
+	ret
 
 MeetMomTalkedScript:
 	playmusic MUSIC_MOM

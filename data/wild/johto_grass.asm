@@ -1,5 +1,8 @@
 ; Johto Pokémon in grass
 
+; encounter probabilities are:
+; 30 - 30 - 20 - 10 - 5 - 4 - 1 %
+
 JohtoGrassWildMons:
 
 	def_grass_wildmons SPROUT_TOWER_2F
@@ -1708,6 +1711,36 @@ JohtoGrassWildMons:
 	dbw 40, GOLBAT
 	dbw 44, GOLBAT
 	dbw 44, GOLBAT
+	end_grass_wildmons
+
+; new ----------------------------------------------
+
+	def_grass_wildmons ROUTE_119
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 12, SENTRET  ; 30
+	dbw 12, PHANPY   ; 30
+	dbw 14, SENTRET  ; 20
+	dbw 13, LEDYBA   ; 10
+	dbw 14, PHANPY   ; 5
+	dbw 15, LEDYBA   ; 4
+	dbw 16, SMEARGLE ; 1
+	; day
+	dbw 12, SPINARAK ; 30
+	dbw 12, PHANPY   ; 30
+	dbw 14, SPINARAK ; 20
+	dbw 13, LEDYBA   ; 10
+	dbw 14, PHANPY   ; 5
+	dbw 15, LEDYBA   ; 4
+	dbw 16, MAREEP   ; 1
+	; nite
+	dbw 12, HOOTHOOT ; 30
+	dbw 12, PHANPY   ; 30
+	dbw 14, HOOTHOOT ; 20
+	dbw 13, LEDYBA   ; 10
+	dbw 14, PHANPY   ; 5
+	dbw 15, LEDYBA   ; 4
+	dbw 16, NATU     ; 1
 	end_grass_wildmons
 
 	db -1 ; end

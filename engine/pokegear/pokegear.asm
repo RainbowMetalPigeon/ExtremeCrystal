@@ -565,8 +565,8 @@ PokegearMap_KantoMap:
 	call TownMap_GetKantoLandmarkLimits
 	jr PokegearMap_ContinueMap
 
-PokegearMap_JohtoMap:
-	ld d, LANDMARK_SILVER_CAVE
+PokegearMap_JohtoMap: ; to be edited when adding a new map AFTER Silve Cave
+	ld d, LANDMARK_ROUTE_119 ; edited, was LANDMARK_SILVER_CAVE
 	ld e, LANDMARK_NEW_BARK_TOWN
 PokegearMap_ContinueMap:
 	ld hl, hJoyLast

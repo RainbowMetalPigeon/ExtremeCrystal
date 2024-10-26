@@ -48,7 +48,8 @@
 	const LANDMARK_DARK_CAVE         ; 2c
 	const LANDMARK_ROUTE_46          ; 2d
 	const LANDMARK_SILVER_CAVE       ; 2e
-DEF KANTO_LANDMARK EQU const_value
+	const LANDMARK_ROUTE_119         ; new
+DEF KANTO_LANDMARK EQU const_value   ; numbers below are shifted because of new landmarks
 	const LANDMARK_PALLET_TOWN       ; 2f
 	const LANDMARK_ROUTE_1           ; 30
 	const LANDMARK_VIRIDIAN_CITY     ; 31

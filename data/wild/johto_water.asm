@@ -1,5 +1,8 @@
 ; Johto Pokémon in water
 
+; the probabilities for the three slots seems to be:
+; 60 - 30 - 10 %
+
 JohtoWaterWildMons:
 
 	def_water_wildmons RUINS_OF_ALPH_OUTSIDE
@@ -266,6 +269,15 @@ JohtoWaterWildMons:
 	dbw 35, POLIWHIRL
 	dbw 40, POLIWHIRL
 	dbw 35, POLIWAG
+	end_water_wildmons
+	
+; new ----------------------------------------
+
+	def_water_wildmons ROUTE_119
+	db 2 percent ; encounter rate
+	dbw 30, QWILFISH
+	dbw 30, QUAGSIRE
+	dbw 30, LANTURN
 	end_water_wildmons
 
 	db -1 ; end

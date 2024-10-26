@@ -54,6 +54,8 @@ Landmarks:
 	landmark 112,  72, DarkCaveName
 	landmark 124,  88, Route46Name
 	landmark 148,  68, SilverCaveName
+	landmark 140, 124, Route119Name ; new
+
 	assert_table_length KANTO_LANDMARK
 	landmark  52, 108, PalletTownName
 	landmark  52,  92, Route1Name
@@ -208,3 +210,7 @@ TohjoFallsName:      db "TOHJO FALLS@"
 UndergroundName:     db "UNDERGROUND@"
 BattleTowerName:     db "BATTLE<BSP>TOWER@"
 SpecialMapName:      db "SPECIAL@"
+
+; new -----------------------------------------------------
+
+Route119Name:        db "ROUTE 119@"
