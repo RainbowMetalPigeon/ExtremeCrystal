@@ -37,8 +37,10 @@ MeetMomScript:
 
 ; new temporary debug stuff ---------------------------------
 
-	givepoke CELEBI, 42
-	givepoke MEW, 42
+;	givepoke CELEBI, 42
+;	givepoke MEW, 42
+
+;	callasm .asm_give_moves
 
 	setflag ENGINE_ZEPHYRBADGE
 	setflag ENGINE_HIVEBADGE
@@ -99,6 +101,7 @@ MeetMomScript:
 	setflag ENGINE_FLYPOINT_SAFFRON
 	setflag ENGINE_FLYPOINT_CINNABAR
 
+	giveitem MAX_REPEL, 99
 	giveitem HM_CUT
 	giveitem HM_FLY
 	giveitem HM_SURF
@@ -107,24 +110,6 @@ MeetMomScript:
 	giveitem HM_WHIRLPOOL
 	giveitem HM_WATERFALL
 	giveitem TM_ROCK_SMASH, 99
-
-;	ld a, FLY
-;	ld [wPartyMon1Moves], a
-
-	callasm .asm_give_moves
-
-;	loadmem wPartyMon1Moves+0, 0
-;	loadmem wPartyMon1Moves+1, FLY
-
-;	loadmem wPartyMon1Moves+0, FLY
-;	loadmem wPartyMon1Moves+1, FLASH
-;	loadmem wPartyMon1Moves+2, CUT
-;	loadmem wPartyMon1Moves+3, STRENGTH
-;
-;	loadmem wPartyMon2Moves+0, SURF
-;	loadmem wPartyMon2Moves+1, ROCK_SMASH
-;	loadmem wPartyMon2Moves+2, WHIRLPOOL
-;	loadmem wPartyMon2Moves+3, WATERFALL
 
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD

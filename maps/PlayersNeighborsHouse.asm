@@ -28,6 +28,7 @@ OpalScript:
 	closetext
 ; also gives some items
 	giveitem POTION, 3
+	giveitem ETHER, 1
 	opentext
 	writetext OpalText_AfterRivalEscapes4
 	playsound SFX_ITEM
@@ -152,12 +153,13 @@ OpalText_AfterRivalEscapes3:
 	text "And take these"
 	line "too, they'll be"
 	cont "helpful!"
-;	xxxx "123456789012345678"
 	done
 
 OpalText_AfterRivalEscapes4:
 	text "<PLAYER> received"
-	line "3 POTIONs!"
+	line "3 POTIONs and"
+	cont "1 ETHER!"
+;	xxxx "123456789012345678"
 	done
 
 OpalText_AfterRivalEscapes5:

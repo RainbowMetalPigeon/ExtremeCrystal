@@ -699,6 +699,6 @@ ENDM
 
 ; new maps
 
-	map_attributes Route119, ROUTE_119, $05, NORTH
+	map_attributes Route119, ROUTE_119, $35, NORTH
 	connection north, NewBarkTown, NEW_BARK_TOWN, 2
 

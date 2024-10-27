@@ -145,25 +145,7 @@ Rival1Group: ; edited
 	dw TOTODILE
 	db -1 ; end
 
-	next_list_item ; RIVAL1 (2) ; TBE
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db 5
-	dw CYNDAQUIL
-	db 5
-	dw TOTODILE
-	db -1 ; end
-
-	next_list_item ; RIVAL1 (3) ; TBE
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db 5
-	dw CYNDAQUIL
-	db 5
-	dw TOTODILE
-	db -1 ; end
+; numbers below don't make sense until I update them
 
 	next_list_item ; RIVAL1 (4)
 	db "?@", TRAINERTYPE_NORMAL

@@ -616,6 +616,7 @@ InitializeEventsScript:
 	setevent EVENT_INITIALIZED_EVENTS
 ; new
 	setevent EVENT_RIVAL_NEW_BARK_TOWN
+	setevent EVENT_ROUTE_29_OPAL_1
 ; back to vanilla
 	endcallback
 

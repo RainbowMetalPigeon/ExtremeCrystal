@@ -6,10 +6,15 @@
 	const ROUTE29_FISHER
 	const ROUTE29_COOLTRAINER_M2
 	const ROUTE29_TUSCANY
+	const ROUTE29_RIVAL ; new
+	const ROUTE29_OPAL_1 ; new
+	const ROUTE29_OPAL_2 ; new
 	const ROUTE29_POKE_BALL
 
 Route29_MapScripts:
 	def_scene_scripts
+	scene_script Route29Noop3Scene, SCENE_ROUTE29_RIVAL_FACE_OFF ; new
+	scene_script Route29Noop4Scene, SCENE_ROUTE29_OPAL_BLOCKS_WAY ; new
 	scene_script Route29Noop1Scene, SCENE_ROUTE29_NOOP
 	scene_script Route29Noop2Scene, SCENE_ROUTE29_CATCH_TUTORIAL
 
@@ -20,6 +25,12 @@ Route29Noop1Scene:
 	end
 
 Route29Noop2Scene:
+	end
+
+Route29Noop3Scene: ; new
+	end
+
+Route29Noop4Scene: ; new
 	end
 
 Route29TuscanyCallback:
@@ -136,6 +147,164 @@ CatchingTutorialDudeScript:
 	closetext
 	end
 
+Route29RivalFaceOff: ; new
+	turnobject ROUTE29_RIVAL, DOWN
+	pause 7
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	showemote EMOTE_SHOCK, PLAYER, 15
+	simpletext Route29RivalText1
+	applymovement ROUTE29_RIVAL, Route29_RivalMovement1
+	simpletext Route29RivalText2
+; start the battle
+	winlosstext RivalRoute29WinText, RivalRoute29LossText
+	setlasttalked ROUTE29_RIVAL
+	loadtrainer RIVAL1, RIVAL1_1
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+    readvar VAR_BATTLERESULT ; WIN=0, LOSE=1
+    ifnotequal $0, .AfterYourDefeat
+.AfterVictorious:
+	playmusic MUSIC_RIVAL_AFTER
+	simpletext Route29RivalText_YouWon
+	sjump .FinishRival
+.AfterYourDefeat:
+	playmusic MUSIC_RIVAL_AFTER
+	simpletext Route29RivalText_YouLost
+.FinishRival:
+	applymovement ROUTE29_RIVAL, Route29_RivalMovement2
+	disappear ROUTE29_RIVAL
+	special HealParty
+	playmapmusic
+; Opal arrival
+	appear ROUTE29_OPAL_1
+	pause 10
+	simpletext Route29Opal1Text1
+	showemote EMOTE_SHOCK, PLAYER, 15
+	turnobject PLAYER, RIGHT
+	applymovement ROUTE29_OPAL_1, Route29_Opal1Movement1
+	turnobject PLAYER, DOWN
+	applymovement ROUTE29_OPAL_1, Route29_Opal1Movement2
+; Opal goes searching for Silver
+	simpletext Route29Opal1Text2
+	applymovement PLAYER, Route29_PlayerMovesAwayMovement1
+	applymovement ROUTE29_OPAL_1, Route29_Opal1Movement3
+	disappear ROUTE29_OPAL_1
+	setscene SCENE_ROUTE29_OPAL_BLOCKS_WAY
+; end of Opal part
+	end
+
+Route29RivalText1:
+	text "You again?!"
+;	xxxx "123456789012345678"
+	done
+
+Route29RivalText2:
+	text "I'll get rid of ya"
+;	xxxx "123456789012345678"
+	done
+
+RivalRoute29WinText:
+	text "WHAT?!"
+;	xxxx "123456789012345678"
+	done
+
+RivalRoute29LossText:
+	text "Tsk, ofc."
+;	xxxx "123456789012345678"
+	done
+
+Route29RivalText_YouWon:
+	text "How did you win?!"
+	line "Gotta run!"
+;	xxxx "123456789012345678"
+	done
+
+Route29RivalText_YouLost:
+	text "Ahah, pathetic."
+	line "Farewell loser!"
+;	xxxx "123456789012345678"
+	done
+
+Route29_RivalMovement1: ; new
+	step DOWN
+	step DOWN
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step DOWN
+	step_end
+
+Route29_RivalMovement2: ; new
+	step UP
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step UP
+	step UP
+	step UP
+	step_end
+
+Route29Opal1Text1:
+	text "<PLAYER>!"
+	done
+
+Route29_Opal1Movement1:
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
+
+Route29_Opal1Movement2:
+	step UP
+	step UP
+	step_end
+
+Route29Opal1Text2:
+	text "Go to ELM"
+	line "I search here"
+	done
+
+Route29_PlayerMovesAwayMovement1:
+	step UP
+	step LEFT
+	turn_head RIGHT
+	step_end
+
+Route29_Opal1Movement3:
+	step UP
+	step UP
+	step UP
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step_end
+
+Route29OpalBlocksWay: ; new
+	turnobject ROUTE29_OPAL_2, RIGHT
+	showemote EMOTE_SHOCK, ROUTE29_OPAL_2, 15
+	simpletext Route29OpalBlocksWayText
+	applymovement PLAYER, Route29_OpalBlocksWayPlayerMovement
+	end
+
+Route29OpalBlocksWayText:
+	text "Go back to"
+	line "New Bark Town!"
+	done
+
+Route29_OpalBlocksWayPlayerMovement:
+	step RIGHT
+	step_end
+
 Route29YoungsterScript:
 	jumptextfaceplayer Route29YoungsterText
 
@@ -198,6 +367,10 @@ TuscanyNotTuesdayScript:
 	writetext TuscanyNotTuesdayText
 	waitbutton
 	closetext
+	end
+
+Route29RivalScript: ; new
+Route29OpalScript: ; new
 	end
 
 Route29Sign1:
@@ -421,6 +594,9 @@ Route29_MapEvents:
 	def_coord_events
 	coord_event 53,  8, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial1
 	coord_event 53,  9, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial2
+	coord_event 31, 13, SCENE_ROUTE29_RIVAL_FACE_OFF, Route29RivalFaceOff ; new
+	coord_event 30,  6, SCENE_ROUTE29_OPAL_BLOCKS_WAY, Route29OpalBlocksWay ; new
+	coord_event 30,  7, SCENE_ROUTE29_OPAL_BLOCKS_WAY, Route29OpalBlocksWay ; new
 
 	def_bg_events
 	bg_event 51,  7, BGEVENT_READ, Route29Sign1
@@ -434,4 +610,7 @@ Route29_MapEvents:
 	object_event 25,  3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route29FisherScript, -1
 	object_event 13,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route29CooltrainerMScript, -1
 	object_event 29, 12, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TuscanyScript, EVENT_ROUTE_29_TUSCANY_OF_TUESDAY
+	object_event 36,  9, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route29RivalScript, EVENT_ROUTE_29_RIVAL ; new, script is useless
+	object_event 36, 16, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route29OpalScript, EVENT_ROUTE_29_OPAL_1 ; new, TBE with SPRITE_OPAL
+	object_event 26,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route29OpalScript, EVENT_ROUTE_29_OPAL_2 ; new, TBE with SPRITE_OPAL
 	object_event 48,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Potion, EVENT_ROUTE_29_POTION
