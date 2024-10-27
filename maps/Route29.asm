@@ -192,6 +192,7 @@ Route29RivalFaceOff: ; new
 	applymovement ROUTE29_OPAL_1, Route29_Opal1Movement3
 	disappear ROUTE29_OPAL_1
 	setscene SCENE_ROUTE29_OPAL_BLOCKS_WAY
+	setmapscene ELMS_LAB, SCENE_ELMSLAB_MEET_OFFICER
 ; end of Opal part
 	end
 
