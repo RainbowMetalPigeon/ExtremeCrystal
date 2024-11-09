@@ -47,6 +47,7 @@ OpalScript:
 	playsound SFX_EXIT_BUILDING
 	disappear PLAYERSNEIGHBORSHOUSE_OPAL
 	setevent EVENT_PLAYERS_NEIGHBORS_HOUSE_OPAL
+	setevent EVENT_GOT_TOGEPI_FROM_OPAL
 	setmapscene NEW_BARK_TOWN, SCENE_NEWBARKTOWN_NOOP
 	end
 
@@ -171,16 +172,14 @@ OpalText_AfterRivalEscapes5:
 	done
 
 PlayersNeighborText:
-	text "My daughter is"
+	text "My kid is"
 	line "adamant about"
+	cont "becoming PROF."
+	cont "ELM's assistant."
 
-	para "becoming PROF."
-	line "ELM's assistant."
-
-	para "She really loves"
+	para "They really love"
 	line "#MON!"
-
-	para "But then, so do I!"
+	cont "But then, so do I!"
 	done
 
 PlayerNeighborRadioText1:
@@ -218,5 +217,5 @@ PlayersNeighborsHouse_MapEvents:
 	bg_event  7,  1, BGEVENT_READ, PlayersNeighborsHouseRadioScript
 
 	def_object_events
-	object_event  2,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OpalScript, EVENT_PLAYERS_NEIGHBORS_HOUSE_OPAL ; TBE, will be SPRITE_OPAL
+	object_event  2,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OpalScript, EVENT_PLAYERS_NEIGHBORS_HOUSE_OPAL ; TBE, will be SPRITE_OPAL, also check PAL
 	object_event  5,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PlayersNeighborScript, EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR

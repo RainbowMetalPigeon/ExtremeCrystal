@@ -42,38 +42,38 @@ MeetMomScript:
 
 ;	callasm .asm_give_moves
 
-	setflag ENGINE_ZEPHYRBADGE
-	setflag ENGINE_HIVEBADGE
-	setflag ENGINE_PLAINBADGE
-	setflag ENGINE_FOGBADGE
-	setflag ENGINE_STORMBADGE
-	setflag ENGINE_MINERALBADGE
-	setflag ENGINE_GLACIERBADGE
-	setflag ENGINE_RISINGBADGE
-	setflag ENGINE_BOULDERBADGE
-	setflag ENGINE_CASCADEBADGE
-	setflag ENGINE_THUNDERBADGE
-	setflag ENGINE_RAINBOWBADGE
-	setflag ENGINE_MARSHBADGE
-	setflag ENGINE_SOULBADGE
-	setflag ENGINE_VOLCANOBADGE
-	setflag ENGINE_EARTHBADGE
-	setevent EVENT_BEAT_FALKNER
-	setevent EVENT_BEAT_BUGSY
-	setevent EVENT_BEAT_WHITNEY
-	setevent EVENT_BEAT_MORTY
-	setevent EVENT_BEAT_CHUCK
-	setevent EVENT_BEAT_JASMINE
-	setevent EVENT_BEAT_PRYCE
-	setevent EVENT_BEAT_CLAIR
-	setevent EVENT_BEAT_BROCK
-	setevent EVENT_BEAT_MISTY
-	setevent EVENT_BEAT_LTSURGE
-	setevent EVENT_BEAT_ERIKA
-	setevent EVENT_BEAT_JANINE
-	setevent EVENT_BEAT_SABRINA
-	setevent EVENT_BEAT_BLAINE
-	setevent EVENT_BEAT_BLUE
+;	setflag ENGINE_ZEPHYRBADGE
+;	setflag ENGINE_HIVEBADGE
+;	setflag ENGINE_PLAINBADGE
+;	setflag ENGINE_FOGBADGE
+;	setflag ENGINE_STORMBADGE
+;	setflag ENGINE_MINERALBADGE
+;	setflag ENGINE_GLACIERBADGE
+;	setflag ENGINE_RISINGBADGE
+;	setflag ENGINE_BOULDERBADGE
+;	setflag ENGINE_CASCADEBADGE
+;	setflag ENGINE_THUNDERBADGE
+;	setflag ENGINE_RAINBOWBADGE
+;	setflag ENGINE_MARSHBADGE
+;	setflag ENGINE_SOULBADGE
+;	setflag ENGINE_VOLCANOBADGE
+;	setflag ENGINE_EARTHBADGE
+;	setevent EVENT_BEAT_FALKNER
+;	setevent EVENT_BEAT_BUGSY
+;	setevent EVENT_BEAT_WHITNEY
+;	setevent EVENT_BEAT_MORTY
+;	setevent EVENT_BEAT_CHUCK
+;	setevent EVENT_BEAT_JASMINE
+;	setevent EVENT_BEAT_PRYCE
+;	setevent EVENT_BEAT_CLAIR
+;	setevent EVENT_BEAT_BROCK
+;	setevent EVENT_BEAT_MISTY
+;	setevent EVENT_BEAT_LTSURGE
+;	setevent EVENT_BEAT_ERIKA
+;	setevent EVENT_BEAT_JANINE
+;	setevent EVENT_BEAT_SABRINA
+;	setevent EVENT_BEAT_BLAINE
+;	setevent EVENT_BEAT_BLUE
 ;	setevent EVENT_BEAT_ELITE_FOUR
 
 	setflag ENGINE_FLYPOINT_NEW_BARK
@@ -116,6 +116,10 @@ MeetMomScript:
 	setflag ENGINE_MAP_CARD
 	setflag ENGINE_RADIO_CARD
 	setflag ENGINE_EXPN_CARD
+
+	setmapscene ELMS_LAB, SCENE_ELMSLAB_MEET_OFFICER
+	setevent EVENT_RIVAL_ESCAPES_FROM_LAB
+	clearevent EVENT_COP_IN_ELMS_LAB
 
 ; back to vanilla -------------------------------------------
 	
@@ -325,9 +329,8 @@ MomWalksBackMovement:
 ElmsLookingForYouText:
 	text "Oh, <PLAYER>…! Our"
 	line "neighbor, PROF."
-
-	para "ELM, was looking"
-	line "for you."
+	cont "ELM, was looking"
+	cont "for you."
 
 	para "He said he wanted"
 	line "you to do some-"
@@ -337,23 +340,20 @@ ElmsLookingForYouText:
 	line "got! Your #MON"
 	cont "GEAR is back from"
 	cont "the repair shop."
-
-	para "Here you go!"
+	cont "Here you go!"
 	done
 
 MomGivesPokegearText:
 	text "#MON GEAR, or"
 	line "just #GEAR."
-
-	para "It's essential if"
-	line "you want to be a"
+	cont "It's essential if"
+	cont "you want to be a"
 	cont "good trainer."
 
 	para "Oh, the day of the"
 	line "week isn't set."
-
-	para "You mustn't forget"
-	line "that!"
+	cont "You mustn't forget"
+	cont "that!"
 	done
 
 IsItDSTText:
@@ -364,9 +364,8 @@ IsItDSTText:
 ComeHomeForDSTText:
 	text "Come home to"
 	line "adjust your clock"
-
-	para "for Daylight"
-	line "Saving Time."
+	cont "for Daylight"
+	cont "Saving Time."
 
 	para "By the way, do you"
 	line "know how to use"
@@ -431,35 +430,33 @@ ImBehindYouText:
 
 NeighborMornIntroText:
 	text "Good morning,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 
 	para "I'm visiting!"
 	done
 
 NeighborDayIntroText:
-	text "Hello, <PLAY_G>!"
+	text "Hello, <PLAYER>!"
 	line "I'm visiting!"
 	done
 
 NeighborNiteIntroText:
 	text "Good evening,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 
 	para "I'm visiting!"
 	done
 
 NeighborText:
-	text "<PLAY_G>, have you"
+	text "<PLAYER>, have you"
 	line "heard?"
 
-	para "My daughter is"
+	para "My kid is"
 	line "adamant about"
-
-	para "becoming PROF."
-	line "ELM's assistant."
-
-	para "She really loves"
-	line "#MON!"
+	cont "becoming PROF."
+	cont "ELM's assistant."
+	cont "They really love"
+	cont "#MON!"
 	done
 
 PlayersHouse1FStoveText:
@@ -486,9 +483,8 @@ PlayersHouse1FFridgeText:
 PlayersHouse1FTVText:
 	text "There's a movie on"
 	line "TV: Stars dot the"
-
-	para "sky as two boys"
-	line "ride on a train…"
+	cont "sky as two boys"
+	cont "ride on a train…"
 
 	para "I'd better get"
 	line "rolling too!"

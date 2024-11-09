@@ -277,9 +277,8 @@ Text_ItsDangerousToGoAlone:
 
 	para "Wild #MON"
 	line "jump out of the"
-
-	para "grass on the way"
-	line "to the next town."
+	cont "grass on the way"
+	cont "to the next town."
 	done
 
 Text_YourMonIsAdorable:

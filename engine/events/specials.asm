@@ -80,15 +80,14 @@ FoundNone:
 	ld [wScriptVar], a
 	ret
 
-NameRival:
+NameRival: ; edited, always name rival as SILVER
 	ld b, NAME_RIVAL
-	ld de, wRivalName
-	farcall _NamingScreen
+;	ld de, wRivalName
+;	farcall _NamingScreen
 	ld hl, wRivalName
 	ld de, .DefaultName
 	call InitName
 	ret
-
 .DefaultName:
 	db "SILVER@"
 

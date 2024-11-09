@@ -617,6 +617,7 @@ InitializeEventsScript:
 ; new
 	setevent EVENT_RIVAL_NEW_BARK_TOWN
 	setevent EVENT_ROUTE_29_OPAL_1
+	setevent EVENT_OPAL_IN_ELMS_LAB
 ; back to vanilla
 	endcallback
 
