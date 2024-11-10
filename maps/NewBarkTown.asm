@@ -435,7 +435,7 @@ NewBarkTownElmsLabWindowText_PostTheft: ; new
 	para "It looks chaotic,"
 	line "busy, and a bit"
 	cont "old-style. In a"
-	cont "word, scientific!"
+	cont "word: scientific!"
 	done
 
 NewBarkTown_MapEvents:

@@ -27,8 +27,7 @@ OpalScript:
 	promptbutton
 	closetext
 ; also gives some items
-	giveitem POTION, 3
-	giveitem ETHER, 1
+	giveitem POTION, 1
 	opentext
 	writetext OpalText_AfterRivalEscapes4
 	playsound SFX_ITEM
@@ -151,15 +150,14 @@ OpalText_AfterRivalEscapes2:
 	done
 
 OpalText_AfterRivalEscapes3:
-	text "And take these"
-	line "too, they'll be"
+	text "And take this"
+	line "too, it'll be"
 	cont "helpful!"
 	done
 
 OpalText_AfterRivalEscapes4:
 	text "<PLAYER> received"
-	line "3 POTIONs and"
-	cont "1 ETHER!"
+	line "POTION."
 ;	xxxx "123456789012345678"
 	done
 

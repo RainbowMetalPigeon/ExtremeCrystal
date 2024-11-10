@@ -42,8 +42,8 @@ Route119HiddenRareCandy1:
 Route119HiddenRareCandy2:
 	hiddenitem RARE_CANDY, EVENT_ROUTE_119_HIDDEN_RARE_CANDY_2
 
-Route119HiddenRevive:
-	hiddenitem REVIVE, EVENT_ROUTE_119_HIDDEN_REVIVE
+Route119HiddenEther:
+	hiddenitem ETHER, EVENT_ROUTE_119_HIDDEN_ETHER
 
 Route119HiddenMaxElixer:
 	hiddenitem MAX_ELIXER, EVENT_ROUTE_119_HIDDEN_MAX_ELIXER
@@ -79,7 +79,7 @@ Route119_MapEvents:
 	def_bg_events
 	bg_event 10, 24, BGEVENT_READ, Route119PressAToInteractSign
 	bg_event 25, 27, BGEVENT_ITEM, Route119HiddenRareCandy1
-	bg_event  5, 21, BGEVENT_ITEM, Route119HiddenRevive
+	bg_event  5, 21, BGEVENT_ITEM, Route119HiddenEther
 	bg_event  8, 42, BGEVENT_ITEM, Route119HiddenMaxElixer
 	bg_event 14, 41, BGEVENT_ITEM, Route119HiddenRareCandy2
 	bg_event 14, 19, BGEVENT_ITEM, Route119HiddenUltraBall

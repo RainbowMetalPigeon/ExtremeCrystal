@@ -138,45 +138,45 @@ ElmCheckGotEggAgain: ; TBE
 	closetext
 	end
 
-ElmDirectionsScript: ; TBE
-	turnobject PLAYER, UP
+;ElmDirectionsScript: ; TBE
+;	turnobject PLAYER, UP
+;
+;	opentext
+;	writetext ElmDirectionsText1
+;	waitbutton
+;	closetext
+;
+;	addcellnum PHONE_ELM
+;
+;	opentext
+;	writetext GotElmsNumberText
+;	playsound SFX_REGISTER_PHONE_NUMBER
+;	waitsfx
+;	waitbutton
+;	closetext
+;
+;	turnobject ELMSLAB_ELM, LEFT
+;
+;	opentext
+;	writetext ElmDirectionsText2
+;	waitbutton
+;	closetext
+;
+;	turnobject ELMSLAB_ELM, DOWN
+;
+;	opentext
+;	writetext ElmDirectionsText3
+;	waitbutton
+;	closetext
+;
+;	setmapscene NEW_BARK_TOWN, SCENE_NEWBARKTOWN_NOOP
+;	end
 
-	opentext
-	writetext ElmDirectionsText1
-	waitbutton
-	closetext
-
-	addcellnum PHONE_ELM
-
-	opentext
-	writetext GotElmsNumberText
-	playsound SFX_REGISTER_PHONE_NUMBER
-	waitsfx
-	waitbutton
-	closetext
-
-	turnobject ELMSLAB_ELM, LEFT
-
-	opentext
-	writetext ElmDirectionsText2
-	waitbutton
-	closetext
-
-	turnobject ELMSLAB_ELM, DOWN
-
-	opentext
-	writetext ElmDirectionsText3
-	waitbutton
-	closetext
-
-	setmapscene NEW_BARK_TOWN, SCENE_NEWBARKTOWN_NOOP
-	end
-
-ElmDescribesMrPokemonScript:
-	writetext ElmDescribesMrPokemonText
-	waitbutton
-	closetext
-	end
+;ElmDescribesMrPokemonScript:
+;	writetext ElmDescribesMrPokemonText
+;	waitbutton
+;	closetext
+;	end
 
 ElmsLabHealingMachine:
 	opentext
@@ -221,11 +221,11 @@ ElmHurriesYouToChaseThiefScript:
 	closetext
 	end
 	
-ElmAideHasEggScript:
-	writetext ElmAideHasEggText
-	waitbutton
-	closetext
-	end
+;ElmAideHasEggScript:
+;	writetext ElmAideHasEggText
+;	waitbutton
+;	closetext
+;	end
 
 ElmWaitingEggHatchScript:
 	writetext ElmWaitingEggHatchText
@@ -335,10 +335,13 @@ AideScript_ReceiveTheBalls:
 
 ElmsAideScript: ; TBE
 	faceplayer
-	simpletext AideText_AlwaysBusy ; AideText_AfterTheft
 ;	opentext
-;	checkevent EVENT_GOT_WYNAUT_EGG_FROM_MX_POKEMON
-;	iftrue AideScript_AfterTheft
+	checkevent EVENT_COP_AND_OPAL_LEFT_ELMS_LAB
+	iftrue .afterLeft
+	simpletext AideText_AfterTheft
+	end
+.afterLeft
+	simpletext AideText_AlwaysBusy
 ;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 ;	iftrue AideScript_ExplainBalls
 ;	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
@@ -403,7 +406,22 @@ CopScript:
 	simpletext ElmsLabOpalText4
 
 	simpletext ElmsLab_ElmPostCopText4
+	addcellnum PHONE_ELM
+	opentext
+	writetext GotElmsNumberText
+	playsound SFX_REGISTER_PHONE_NUMBER
+	waitsfx
+	waitbutton
+	closetext
+;	addcellnum PHONE_OPAL
+;	opentext
+;	writetext GotOpalsNumberText
+;	playsound SFX_REGISTER_PHONE_NUMBER
+;	waitsfx
+;	waitbutton
+;	closetext
 
+	simpletext ElmsLab_ElmPostCopText5
 	opentext
 	writetext ElmsLab_GetDexText
 	playsound SFX_ITEM
@@ -414,7 +432,7 @@ CopScript:
 	
 	simpletext ElmsLabOpalText5
 
-	simpletext ElmsLab_ElmPostCopText5
+	simpletext ElmsLab_ElmPostCopText6
 
 	simpletext ElmsLabOpalText6
 	turnobject ELMSLAB_OPAL, LEFT
@@ -428,6 +446,8 @@ CopScript:
 
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POTIONS_AND_POKE_BALLS
 	setevent EVENT_COP_AND_OPAL_LEFT_ELMS_LAB
+	setmapscene ROUTE_29, SCENE_ROUTE29_NOOP
+	clearevent EVENT_ROUTE_29_OPAL_2
 	end
 
 ElmsLabWindow:
@@ -792,6 +812,11 @@ ElmDirectionsText3:
 
 GotElmsNumberText:
 	text "<PLAYER> got ELM's"
+	line "phone number."
+	done
+
+GotOpalsNumberText:
+	text "<PLAYER> got OPAL's"
 	line "phone number."
 	done
 
@@ -1174,7 +1199,7 @@ ElmsLab_ElmPostCopText3:
 	cont "usual choice."
 
 	para "OPAL, if that is"
-	line "okay for with you,"
+	line "okay with you,"
 	cont "I'd like to"
 	cont "entrust TOGEPI to"
 	cont "<PLAYER> as their"
@@ -1191,18 +1216,32 @@ ElmsLabOpalText4:
 	done
 
 ElmsLab_ElmPostCopText4:
-	text "ELM: Excellent."
+	text "ELM: Excellent!"
 	line "Thank you very"
 	cont "much, OPAL."
 
-	para "This said… I'd like"
+	para "Also, we should"
+	line "register our phone"
+	cont "numbers, just in"
+	cont "case. Feel free to"
+	cont "call me anytime!"
+	done
+
+ElmsLab_ElmPostCopText5:
+	text "This said… I'd like"
 	line "to thank you two"
 	cont "for the great help"
 	cont "you gave me today."
 
-	para "These is an"
+	para "And I'd like to"
+	line "express my"
+	cont "gratitude in a"
+	cont "tangible way."
+
+	para "This is an"
 	line "incredibly rare"
 	cont "and valuable tool."
+;	xxxx "123456789012345678"
 
 	para "I'd be happy if"
 	line "you accepted it"
@@ -1228,7 +1267,7 @@ ElmsLabOpalText5:
 	cont "trainers have it!"
 	done
 
-ElmsLab_ElmPostCopText5:
+ElmsLab_ElmPostCopText6:
 	text "ELM: That's quite"
 	line "correct!"
 
@@ -1279,7 +1318,6 @@ ElmsLabOpalText7:
 	cont "cross our paths"
 	cont "soon and see how"
 	cont "we grew!"
-;	xxxx "123456789012345678"
 	done
 
 ElmsLabWindowText:

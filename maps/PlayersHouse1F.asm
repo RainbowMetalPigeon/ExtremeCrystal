@@ -117,9 +117,9 @@ MeetMomScript:
 	setflag ENGINE_RADIO_CARD
 	setflag ENGINE_EXPN_CARD
 
-	setmapscene ELMS_LAB, SCENE_ELMSLAB_MEET_OFFICER
-	setevent EVENT_RIVAL_ESCAPES_FROM_LAB
-	clearevent EVENT_COP_IN_ELMS_LAB
+;	setmapscene ELMS_LAB, SCENE_ELMSLAB_MEET_OFFICER
+;	setevent EVENT_RIVAL_ESCAPES_FROM_LAB
+;	clearevent EVENT_COP_IN_ELMS_LAB
 
 ; back to vanilla -------------------------------------------
 	

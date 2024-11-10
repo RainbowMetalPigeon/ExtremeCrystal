@@ -13,10 +13,10 @@
 
 Route29_MapScripts:
 	def_scene_scripts
-	scene_script Route29Noop3Scene, SCENE_ROUTE29_RIVAL_FACE_OFF ; new
-	scene_script Route29Noop4Scene, SCENE_ROUTE29_OPAL_BLOCKS_WAY ; new
-	scene_script Route29Noop1Scene, SCENE_ROUTE29_NOOP
-	scene_script Route29Noop2Scene, SCENE_ROUTE29_CATCH_TUTORIAL
+	scene_script Route29Noop1Scene, SCENE_ROUTE29_RIVAL_FACE_OFF ; new
+	scene_script Route29Noop2Scene, SCENE_ROUTE29_OPAL_BLOCKS_WAY ; new
+	scene_script Route29Noop3Scene, SCENE_ROUTE29_NOOP
+;	scene_script Route29Noop2Scene, SCENE_ROUTE29_CATCH_TUTORIAL
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, Route29TuscanyCallback
@@ -28,9 +28,6 @@ Route29Noop2Scene:
 	end
 
 Route29Noop3Scene: ; new
-	end
-
-Route29Noop4Scene: ; new
 	end
 
 Route29TuscanyCallback:
@@ -47,105 +44,103 @@ Route29TuscanyCallback:
 	appear ROUTE29_TUSCANY
 	endcallback
 
-Route29Tutorial1:
-	turnobject ROUTE29_COOLTRAINER_M1, UP
-	showemote EMOTE_SHOCK, ROUTE29_COOLTRAINER_M1, 15
-	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData1a
-	turnobject PLAYER, LEFT
-	setevent EVENT_DUDE_TALKED_TO_YOU
-	opentext
-	writetext CatchingTutorialIntroText
-	yesorno
-	iffalse Script_RefusedTutorial1
-	closetext
-	follow ROUTE29_COOLTRAINER_M1, PLAYER
-	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData1b
-	stopfollow
-	loadwildmon RATTATA, 5
-	catchtutorial BATTLETYPE_TUTORIAL
-	turnobject ROUTE29_COOLTRAINER_M1, UP
-	opentext
-	writetext CatchingTutorialDebriefText
-	waitbutton
-	closetext
-	setscene SCENE_ROUTE29_NOOP
-	setevent EVENT_LEARNED_TO_CATCH_POKEMON
-	end
+;Route29Tutorial1:
+;	turnobject ROUTE29_COOLTRAINER_M1, UP
+;	showemote EMOTE_SHOCK, ROUTE29_COOLTRAINER_M1, 15
+;	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData1a
+;	turnobject PLAYER, LEFT
+;	setevent EVENT_DUDE_TALKED_TO_YOU
+;	opentext
+;	writetext CatchingTutorialIntroText
+;	yesorno
+;	iffalse Script_RefusedTutorial1
+;	closetext
+;	follow ROUTE29_COOLTRAINER_M1, PLAYER
+;	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData1b
+;	stopfollow
+;	loadwildmon RATTATA, 5
+;	catchtutorial BATTLETYPE_TUTORIAL
+;	turnobject ROUTE29_COOLTRAINER_M1, UP
+;	opentext
+;	writetext CatchingTutorialDebriefText
+;	waitbutton
+;	closetext
+;	setscene SCENE_ROUTE29_NOOP
+;	setevent EVENT_LEARNED_TO_CATCH_POKEMON
+;	end
 
-Route29Tutorial2:
-	turnobject ROUTE29_COOLTRAINER_M1, UP
-	showemote EMOTE_SHOCK, ROUTE29_COOLTRAINER_M1, 15
-	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData2a
-	turnobject PLAYER, LEFT
-	setevent EVENT_DUDE_TALKED_TO_YOU
-	opentext
-	writetext CatchingTutorialIntroText
-	yesorno
-	iffalse Script_RefusedTutorial2
-	closetext
-	follow ROUTE29_COOLTRAINER_M1, PLAYER
-	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData2b
-	stopfollow
-	loadwildmon RATTATA, 5
-	catchtutorial BATTLETYPE_TUTORIAL
-	turnobject ROUTE29_COOLTRAINER_M1, UP
-	opentext
-	writetext CatchingTutorialDebriefText
-	waitbutton
-	closetext
-	setscene SCENE_ROUTE29_NOOP
-	setevent EVENT_LEARNED_TO_CATCH_POKEMON
-	end
+;Route29Tutorial2:
+;	turnobject ROUTE29_COOLTRAINER_M1, UP
+;	showemote EMOTE_SHOCK, ROUTE29_COOLTRAINER_M1, 15
+;	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData2a
+;	turnobject PLAYER, LEFT
+;	setevent EVENT_DUDE_TALKED_TO_YOU
+;	opentext
+;	writetext CatchingTutorialIntroText
+;	yesorno
+;	iffalse Script_RefusedTutorial2
+;	closetext
+;	follow ROUTE29_COOLTRAINER_M1, PLAYER
+;	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData2b
+;	stopfollow
+;	loadwildmon RATTATA, 5
+;	catchtutorial BATTLETYPE_TUTORIAL
+;	turnobject ROUTE29_COOLTRAINER_M1, UP
+;	opentext
+;	writetext CatchingTutorialDebriefText
+;	waitbutton
+;	closetext
+;	setscene SCENE_ROUTE29_NOOP
+;	setevent EVENT_LEARNED_TO_CATCH_POKEMON
+;	end
 
-Script_RefusedTutorial1:
-	writetext CatchingTutorialDeclinedText
-	waitbutton
-	closetext
-	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData1b
-	setscene SCENE_ROUTE29_NOOP
-	end
+;Script_RefusedTutorial1:
+;	writetext CatchingTutorialDeclinedText
+;	waitbutton
+;	closetext
+;	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData1b
+;	setscene SCENE_ROUTE29_NOOP
+;	end
 
-Script_RefusedTutorial2:
-	writetext CatchingTutorialDeclinedText
-	waitbutton
-	closetext
-	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData2b
-	setscene SCENE_ROUTE29_NOOP
-	end
+;Script_RefusedTutorial2:
+;	writetext CatchingTutorialDeclinedText
+;	waitbutton
+;	closetext
+;	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData2b
+;	setscene SCENE_ROUTE29_NOOP
+;	end
 
 CatchingTutorialDudeScript:
 	faceplayer
 	opentext
-	readvar VAR_BOXSPACE
-	ifequal 0, .BoxFull
-	checkevent EVENT_LEARNED_TO_CATCH_POKEMON
-	iftrue .BoxFull
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iffalse .BoxFull
-	writetext CatchingTutorialRepeatText
-	yesorno
-	iffalse .Declined
-	closetext
-	loadwildmon RATTATA, 5
-	catchtutorial BATTLETYPE_TUTORIAL
-	opentext
-	writetext CatchingTutorialDebriefText
-	waitbutton
-	closetext
-	setevent EVENT_LEARNED_TO_CATCH_POKEMON
-	end
-
-.BoxFull:
+;	readvar VAR_BOXSPACE
+;	ifequal 0, .BoxFull
+;	checkevent EVENT_LEARNED_TO_CATCH_POKEMON
+;	iftrue .BoxFull
+;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+;	iffalse .BoxFull
+;	writetext CatchingTutorialRepeatText
+;	yesorno
+;	iffalse .Declined
+;	closetext
+;	loadwildmon RATTATA, 5
+;	catchtutorial BATTLETYPE_TUTORIAL
+;	opentext
+;	writetext CatchingTutorialDebriefText
+;	waitbutton
+;	closetext
+;	setevent EVENT_LEARNED_TO_CATCH_POKEMON
+;	end
+;.BoxFull:
 	writetext CatchingTutorialBoxFullText
 	waitbutton
 	closetext
 	end
-
-.Declined:
-	writetext CatchingTutorialDeclinedText
-	waitbutton
-	closetext
-	end
+;.Declined:
+;	writetext CatchingTutorialDeclinedText
+;	waitbutton
+;	closetext
+;	end
 
 Route29RivalFaceOff: ; new
 	turnobject ROUTE29_RIVAL, DOWN
@@ -594,8 +589,8 @@ Route29_MapEvents:
 	warp_event 27,  1, ROUTE_29_ROUTE_46_GATE, 3
 
 	def_coord_events
-	coord_event 53,  8, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial1
-	coord_event 53,  9, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial2
+;	coord_event 53,  8, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial1
+;	coord_event 53,  9, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial2
 	coord_event 31, 13, SCENE_ROUTE29_RIVAL_FACE_OFF, Route29RivalFaceOff ; new
 	coord_event 30,  6, SCENE_ROUTE29_OPAL_BLOCKS_WAY, Route29OpalBlocksWay ; new
 	coord_event 30,  7, SCENE_ROUTE29_OPAL_BLOCKS_WAY, Route29OpalBlocksWay ; new
@@ -614,5 +609,5 @@ Route29_MapEvents:
 	object_event 29, 12, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TuscanyScript, EVENT_ROUTE_29_TUSCANY_OF_TUESDAY
 	object_event 36,  9, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route29RivalScript, EVENT_ROUTE_29_RIVAL ; new, script is useless
 	object_event 36, 16, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29OpalScript, EVENT_ROUTE_29_OPAL_1 ; new, TBE SPRITE_OPAL, PAL
-	object_event 26,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29OpalScript, EVENT_ROUTE_29_OPAL_2 ; new, TBE SPRITE_OPAL, PAL
+	object_event 27,  6, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route29OpalScript, EVENT_ROUTE_29_OPAL_2 ; new, TBE SPRITE_OPAL, PAL
 	object_event 48,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route29Potion, EVENT_ROUTE_29_POTION
