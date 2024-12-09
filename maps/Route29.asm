@@ -189,6 +189,7 @@ Route29RivalFaceOff: ; new
 	setscene SCENE_ROUTE29_OPAL_BLOCKS_WAY
 	setmapscene ELMS_LAB, SCENE_ELMSLAB_MEET_OFFICER
 	clearevent EVENT_COP_IN_ELMS_LAB
+	appear ROUTE29_OPAL_2
 ; end of Opal part
 	end
 

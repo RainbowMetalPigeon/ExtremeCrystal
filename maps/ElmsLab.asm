@@ -208,7 +208,7 @@ ElmsLabHealingMachine_HealParty:
 ;	waitbutton
 ;	closetext
 ;	end
-	
+
 ElmTogeiFromOpalFromEggFromMxPokemonScript:
 	writetext ElmText_TogeiFromOpalFromEggFromMxPokemon
 	waitbutton
@@ -220,7 +220,7 @@ ElmHurriesYouToChaseThiefScript:
 	waitbutton
 	closetext
 	end
-	
+
 ;ElmAideHasEggScript:
 ;	writetext ElmAideHasEggText
 ;	waitbutton
@@ -392,7 +392,7 @@ CopScript:
 	simpletext ElmsLabOpalText2
 
 	simpletext ElmsLab_ElmPostCopText1
-	
+
 	turnobject ELMSLAB_OPAL, UP
 	simpletext ElmsLabOpalText3
 
@@ -429,7 +429,7 @@ CopScript:
 	setflag ENGINE_POKEDEX
 	waitbutton
 	closetext
-	
+
 	simpletext ElmsLabOpalText5
 
 	simpletext ElmsLab_ElmPostCopText6
@@ -447,7 +447,7 @@ CopScript:
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POTIONS_AND_POKE_BALLS
 	setevent EVENT_COP_AND_OPAL_LEFT_ELMS_LAB
 	setmapscene ROUTE_29, SCENE_ROUTE29_NOOP
-	clearevent EVENT_ROUTE_29_OPAL_2
+	setevent EVENT_ROUTE_29_OPAL_2
 	end
 
 ElmsLabWindow:
@@ -1088,7 +1088,7 @@ ElmsLabOfficerText1:
 	cont "the culprit?"
 	cont "But you couldn't"
 	cont "stop them?"
-	
+
 	para "Did you at least"
 	line "manage to get any"
 	cont "info? Their name,"
