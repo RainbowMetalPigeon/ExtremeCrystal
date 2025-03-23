@@ -758,7 +758,7 @@ KantoGrassWildMons:
 	dbw 14, NOCTOWL
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_26
+	def_grass_wildmons ROUTE_101
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 28, DODUO
@@ -786,7 +786,7 @@ KantoGrassWildMons:
 	dbw 30, QUAGSIRE
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_27
+	def_grass_wildmons ROUTE_102
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 28, DODUO
@@ -814,7 +814,7 @@ KantoGrassWildMons:
 	dbw 32, NOCTOWL
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_28
+	def_grass_wildmons ROUTE_103
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 39, TANGELA

@@ -566,7 +566,7 @@ PokegearMap_KantoMap:
 	jr PokegearMap_ContinueMap
 
 PokegearMap_JohtoMap: ; to be edited when adding a new map AFTER Silve Cave
-	ld d, LANDMARK_ROUTE_119 ; edited, was LANDMARK_SILVER_CAVE
+	ld d, LANDMARK_ROUTE_122 ; edited, was LANDMARK_SILVER_CAVE
 	ld e, LANDMARK_NEW_BARK_TOWN
 PokegearMap_ContinueMap:
 	ld hl, hJoyLast
@@ -729,12 +729,12 @@ TownMap_GetKantoLandmarkLimits:
 	ld a, [wStatusFlags]
 	bit STATUSFLAGS_HALL_OF_FAME_F, a
 	jr z, .not_hof
-	ld d, LANDMARK_ROUTE_28
+	ld d, LANDMARK_ROUTE_103
 	ld e, LANDMARK_PALLET_TOWN
 	ret
 
 .not_hof
-	ld d, LANDMARK_ROUTE_28
+	ld d, LANDMARK_ROUTE_103
 	ld e, LANDMARK_VICTORY_ROAD
 	ret
 
@@ -1526,7 +1526,7 @@ RadioChannels:
 	ld a, [wPokegearMapPlayerIconLandmark]
 	cp LANDMARK_MAHOGANY_TOWN
 	jr z, .ok
-	cp LANDMARK_ROUTE_43
+	cp LANDMARK_ROUTE_118
 	jr z, .ok
 	cp LANDMARK_LAKE_OF_RAGE
 	jr nz, .NoSignal

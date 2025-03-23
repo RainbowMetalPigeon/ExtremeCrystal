@@ -10,7 +10,7 @@ INCLUDE "audio/sfx_pointers.asm"
 
 SECTION "Songs 1", ROMX
 
-INCLUDE "audio/music/route36.asm"
+INCLUDE "audio/music/route111.asm"
 INCLUDE "audio/music/rivalbattle.asm"
 INCLUDE "audio/music/rocketbattle.asm"
 INCLUDE "audio/music/elmslab.asm"
@@ -48,25 +48,25 @@ INCLUDE "audio/music/pokemonchannel.asm"
 INCLUDE "audio/music/lighthouse.asm"
 INCLUDE "audio/music/lakeofrage.asm"
 INCLUDE "audio/music/indigoplateau.asm"
-INCLUDE "audio/music/route37.asm"
+INCLUDE "audio/music/route112.asm"
 INCLUDE "audio/music/rockethideout.asm"
 INCLUDE "audio/music/dragonsden.asm"
 INCLUDE "audio/music/ruinsofalphradio.asm"
 INCLUDE "audio/music/lookbeauty.asm"
-INCLUDE "audio/music/route26.asm"
+INCLUDE "audio/music/route101.asm"
 INCLUDE "audio/music/ecruteakcity.asm"
 INCLUDE "audio/music/lakeofragerocketradio.asm"
 INCLUDE "audio/music/magnettrain.asm"
 INCLUDE "audio/music/lavendertown.asm"
 INCLUDE "audio/music/dancinghall.asm"
 INCLUDE "audio/music/contestresults.asm"
-INCLUDE "audio/music/route30.asm"
+INCLUDE "audio/music/route105.asm"
 
 
 SECTION "Songs 3", ROMX
 
 INCLUDE "audio/music/violetcity.asm"
-INCLUDE "audio/music/route29.asm"
+INCLUDE "audio/music/route104.asm"
 INCLUDE "audio/music/halloffame.asm"
 INCLUDE "audio/music/healpokemon.asm"
 INCLUDE "audio/music/evolution.asm"

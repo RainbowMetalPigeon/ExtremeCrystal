@@ -44,7 +44,7 @@
 	const MUSIC_UNION_CAVE                   ; 28
 	const MUSIC_JOHTO_WILD_BATTLE            ; 29
 	const MUSIC_JOHTO_TRAINER_BATTLE         ; 2a
-	const MUSIC_ROUTE_30                     ; 2b
+	const MUSIC_ROUTE_105                     ; 2b
 	const MUSIC_ECRUTEAK_CITY                ; 2c
 	const MUSIC_VIOLET_CITY                  ; 2d
 	const MUSIC_JOHTO_GYM_LEADER_BATTLE      ; 2e
@@ -53,8 +53,8 @@
 	const MUSIC_ROCKET_BATTLE                ; 31
 	const MUSIC_PROF_ELM                     ; 32
 	const MUSIC_DARK_CAVE                    ; 33
-	const MUSIC_ROUTE_29                     ; 34
-	const MUSIC_ROUTE_36                     ; 35
+	const MUSIC_ROUTE_104                     ; 34
+	const MUSIC_ROUTE_111                     ; 35
 	const MUSIC_SS_AQUA                      ; 36
 	const MUSIC_YOUNGSTER_ENCOUNTER          ; 37
 	const MUSIC_BEAUTY_ENCOUNTER             ; 38
@@ -72,13 +72,13 @@
 	const MUSIC_LIGHTHOUSE                   ; 44
 	const MUSIC_LAKE_OF_RAGE                 ; 45
 	const MUSIC_INDIGO_PLATEAU               ; 46
-	const MUSIC_ROUTE_37                     ; 47
+	const MUSIC_ROUTE_112                     ; 47
 	const MUSIC_ROCKET_HIDEOUT               ; 48
 	const MUSIC_DRAGONS_DEN                  ; 49
 	const MUSIC_JOHTO_WILD_BATTLE_NIGHT      ; 4a
 	const MUSIC_RUINS_OF_ALPH_RADIO          ; 4b
 	const MUSIC_CAPTURE                      ; 4c
-	const MUSIC_ROUTE_26                     ; 4d
+	const MUSIC_ROUTE_101                     ; 4d
 	const MUSIC_MOM                          ; 4e
 	const MUSIC_VICTORY_ROAD                 ; 4f
 	const MUSIC_POKEMON_LULLABY              ; 50

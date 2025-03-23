@@ -447,12 +447,12 @@ SpecialMapMusic::
 
 .contest
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_35_NATIONAL_PARK_GATE
+	cp GROUP_ROUTE_110_NATIONAL_PARK_GATE
 	jr nz, .no
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_35_NATIONAL_PARK_GATE
+	cp MAP_ROUTE_110_NATIONAL_PARK_GATE
 	jr z, .ranking
-	cp MAP_ROUTE_36_NATIONAL_PARK_GATE
+	cp MAP_ROUTE_111_NATIONAL_PARK_GATE
 	jr nz, .no
 
 .ranking

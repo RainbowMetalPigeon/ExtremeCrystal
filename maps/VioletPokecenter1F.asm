@@ -30,7 +30,7 @@ VioletPokecenter1F_ElmsAideScript: ; TBE, to be removed
 	setevent EVENT_GOT_WYNAUT_EGG_FROM_MX_POKEMON
 	clearevent EVENT_ELMS_AIDE_IN_LAB
 	clearevent EVENT_WYNAUT_HATCHED
-	setmapscene ROUTE_32, SCENE_ROUTE32_OFFER_SLOWPOKETAIL
+	setmapscene ROUTE_107, SCENE_ROUTE107_OFFER_SLOWPOKETAIL
 	writetext VioletPokecenterElmsAideGiveEggText
 	waitbutton
 	closetext

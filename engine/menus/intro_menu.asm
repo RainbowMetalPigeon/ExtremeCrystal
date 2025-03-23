@@ -652,7 +652,7 @@ OakSpeech:
 	call RotateFourPalettesLeft
 	call ClearTilemap
 
-	ld de, MUSIC_ROUTE_30
+	ld de, MUSIC_ROUTE_105
 	call PlayMusic
 
 ;	call RotateFourPalettesRight

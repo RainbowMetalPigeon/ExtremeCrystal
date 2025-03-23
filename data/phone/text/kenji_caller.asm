@@ -46,7 +46,7 @@ KenjiHangUpMorningText:
 
 KenjiTakingABreakText:
 	text "I'm taking a break"
-	line "on ROUTE 45!"
+	line "on ROUTE 120!"
 
 	para "Why not drop by if"
 	line "you are free?"

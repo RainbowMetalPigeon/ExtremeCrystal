@@ -117,11 +117,11 @@ IndigoGroupSprites:
 	; 0 of max 9 walking sprites
 	db 0 ; end
 
-; Route29 and CherrygroveCity are connected
+; Route104 and CherrygroveCity are connected
 NewBarkGroupSprites:
-; Route26, Route27, Route29, NewBarkTown
+; Route101, Route102, Route104, NewBarkTown
 CherrygroveGroupSprites:
-; Route30, Route31, CherrygroveCity
+; Route105, Route106, CherrygroveCity
 	db SPRITE_RIVAL
 	db SPRITE_TEACHER
 	db SPRITE_FISHER
@@ -138,9 +138,9 @@ CherrygroveGroupSprites:
 	db SPRITE_BOULDER
 	db 0 ; end
 
-; Route37 and EcruteakCity are connected
+; Route112 and EcruteakCity are connected
 VioletGroupSprites:
-; Route32, Route35, Route36, Route37, VioletCity
+; Route107, Route110, Route111, Route112, VioletCity
 EcruteakGroupSprites:
 ; EcruteakCity
 	db SPRITE_FISHER
@@ -159,7 +159,7 @@ EcruteakGroupSprites:
 	db 0 ; end
 
 AzaleaGroupSprites:
-; Route33, AzaleaTown
+; Route108, AzaleaTown
 	db SPRITE_GRAMPS
 	db SPRITE_YOUNGSTER
 	db SPRITE_POKEFAN_M
@@ -173,7 +173,7 @@ AzaleaGroupSprites:
 	db 0 ; end
 
 GoldenrodGroupSprites:
-; Route34, GoldenrodCity
+; Route109, GoldenrodCity
 	db SPRITE_GRAMPS
 	db SPRITE_YOUNGSTER
 	db SPRITE_OFFICER
@@ -187,11 +187,11 @@ GoldenrodGroupSprites:
 	db SPRITE_POKE_BALL
 	db 0 ; end
 
-; OlivineCity and Route40 are connected
+; OlivineCity and Route115 are connected
 OlivineGroupSprites:
-; Route38, Route39, OlivineCity
+; Route113, Route114, OlivineCity
 CianwoodGroupSprites:
-; Route40, Route41, CianwoodCity, BattleTowerOutside
+; Route115, Route116, CianwoodCity, BattleTowerOutside
 	db SPRITE_OLIVINE_RIVAL ; variable sprite: becomes SPRITE_RIVAL and SPRITE_SWIMMER_GUY
 	db SPRITE_POKEFAN_M
 	db SPRITE_LASS
@@ -209,7 +209,7 @@ CianwoodGroupSprites:
 	db 0 ; end
 
 MahoganyGroupSprites:
-; Route42, Route44, MahoganyTown
+; Route117, Route119, MahoganyTown
 	db SPRITE_GRAMPS
 	db SPRITE_YOUNGSTER
 	db SPRITE_LASS
@@ -225,7 +225,7 @@ MahoganyGroupSprites:
 	db 0 ; end
 
 LakeOfRageGroupSprites:
-; Route43, LakeOfRage
+; Route118, LakeOfRage
 	db SPRITE_LANCE
 	db SPRITE_GRAMPS
 	db SPRITE_SUPER_NERD
@@ -241,7 +241,7 @@ LakeOfRageGroupSprites:
 	db 0 ; end
 
 BlackthornGroupSprites:
-; Route45, Route46, BlackthornCity
+; Route120, Route121, BlackthornCity
 	db SPRITE_GRAMPS
 	db SPRITE_YOUNGSTER
 	db SPRITE_LASS
@@ -256,7 +256,7 @@ BlackthornGroupSprites:
 	db 0 ; end
 
 SilverGroupSprites:
-; Route28, SilverCaveOutside
+; Route103, SilverCaveOutside
 	; 0 of max 9 walking sprites
 	db 0 ; end
 

@@ -131,63 +131,63 @@ JohtoWaterWildMons:
 	dbw 20, TENTACRUEL
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_30
+	def_water_wildmons ROUTE_105
 	db 2 percent ; encounter rate
 	dbw 20, POLIWAG
 	dbw 15, POLIWAG
 	dbw 20, POLIWHIRL
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_31
+	def_water_wildmons ROUTE_106
 	db 2 percent ; encounter rate
 	dbw 20, POLIWAG
 	dbw 15, POLIWAG
 	dbw 20, POLIWHIRL
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_32
+	def_water_wildmons ROUTE_107
 	db 6 percent ; encounter rate
 	dbw 15, TENTACOOL
 	dbw 20, QUAGSIRE
 	dbw 20, TENTACRUEL
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_34
+	def_water_wildmons ROUTE_109
 	db 6 percent ; encounter rate
 	dbw 20, TENTACOOL
 	dbw 15, TENTACOOL
 	dbw 20, TENTACRUEL
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_35
+	def_water_wildmons ROUTE_110
 	db 4 percent ; encounter rate
 	dbw 20, PSYDUCK
 	dbw 15, PSYDUCK
 	dbw 20, GOLDUCK
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_40
+	def_water_wildmons ROUTE_115
 	db 6 percent ; encounter rate
 	dbw 20, TENTACOOL
 	dbw 15, TENTACOOL
 	dbw 20, TENTACRUEL
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_41
+	def_water_wildmons ROUTE_116
 	db 6 percent ; encounter rate
 	dbw 20, TENTACOOL
 	dbw 20, TENTACRUEL
 	dbw 20, MANTINE
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_42
+	def_water_wildmons ROUTE_117
 	db 4 percent ; encounter rate
 	dbw 20, GOLDEEN
 	dbw 15, GOLDEEN
 	dbw 20, SEAKING
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_43
+	def_water_wildmons ROUTE_118
 	db 2 percent ; encounter rate
 	dbw 20, MAGIKARP
 	dbw 15, MAGIKARP
@@ -201,7 +201,7 @@ JohtoWaterWildMons:
 	dbw 25, POLIWHIRL
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_45
+	def_water_wildmons ROUTE_120
 	db 2 percent ; encounter rate
 	dbw 20, MAGIKARP
 	dbw 15, MAGIKARP
@@ -273,7 +273,7 @@ JohtoWaterWildMons:
 	
 ; new ----------------------------------------
 
-	def_water_wildmons ROUTE_119
+	def_water_wildmons ROUTE_122
 	db 2 percent ; encounter rate
 	dbw 30, QWILFISH
 	dbw 30, QUAGSIRE

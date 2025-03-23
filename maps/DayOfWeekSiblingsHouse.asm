@@ -47,19 +47,19 @@ DayOfWeekSiblingsHousePokedexText2:
 
 DayOfWeekSiblingsHousePokedexText3:
 	text "Monday, MONICA"
-	line "ROUTE 40"
+	line "ROUTE 115"
 
 	para "Tuesday, TUSCANY"
-	line "ROUTE 29"
+	line "ROUTE 104"
 
 	para "Wednesday, WESLEY"
 	line "LAKE OF RAGE"
 
 	para "Thursday, ARTHUR"
-	line "ROUTE 36"
+	line "ROUTE 111"
 
 	para "Friday, FRIEDA"
-	line "ROUTE 32"
+	line "ROUTE 107"
 
 	para "Saturday, SANTOS"
 	line "BLACKTHORN CITY"
@@ -72,8 +72,8 @@ DayOfWeekSiblingsHouse_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, ROUTE_26, 3
-	warp_event  3,  7, ROUTE_26, 3
+	warp_event  2,  7, ROUTE_101, 3
+	warp_event  3,  7, ROUTE_101, 3
 
 	def_coord_events
 

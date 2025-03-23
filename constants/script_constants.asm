@@ -209,29 +209,29 @@ DEF EMOTE_LENGTH EQU 6
 ; fruittree arguments
 ; FruitTreeItems indexes (see data/items/fruit_trees.asm)
 	const_def 1
-	const FRUITTREE_ROUTE_29      ; 01
-	const FRUITTREE_ROUTE_30_1    ; 02
-	const FRUITTREE_ROUTE_38      ; 03
-	const FRUITTREE_ROUTE_46_1    ; 04
-	const FRUITTREE_ROUTE_30_2    ; 05
-	const FRUITTREE_ROUTE_33      ; 06
-	const FRUITTREE_ROUTE_31      ; 07
-	const FRUITTREE_ROUTE_43      ; 08
+	const FRUITTREE_ROUTE_104      ; 01
+	const FRUITTREE_ROUTE_105_1    ; 02
+	const FRUITTREE_ROUTE_113      ; 03
+	const FRUITTREE_ROUTE_121_1    ; 04
+	const FRUITTREE_ROUTE_105_2    ; 05
+	const FRUITTREE_ROUTE_108      ; 06
+	const FRUITTREE_ROUTE_106      ; 07
+	const FRUITTREE_ROUTE_118      ; 08
 	const FRUITTREE_VIOLET_CITY   ; 09
-	const FRUITTREE_ROUTE_46_2    ; 0a
-	const FRUITTREE_ROUTE_35      ; 0b
-	const FRUITTREE_ROUTE_45      ; 0c
-	const FRUITTREE_ROUTE_36      ; 0d
-	const FRUITTREE_ROUTE_26      ; 0e
+	const FRUITTREE_ROUTE_121_2    ; 0a
+	const FRUITTREE_ROUTE_110      ; 0b
+	const FRUITTREE_ROUTE_120      ; 0c
+	const FRUITTREE_ROUTE_111      ; 0d
+	const FRUITTREE_ROUTE_101      ; 0e
 	const FRUITTREE_ROUTE_39      ; 0f
 	const FRUITTREE_ROUTE_44      ; 10
-	const FRUITTREE_ROUTE_37_1    ; 11
-	const FRUITTREE_ROUTE_37_2    ; 12
-	const FRUITTREE_ROUTE_37_3    ; 13
+	const FRUITTREE_ROUTE_112_1    ; 11
+	const FRUITTREE_ROUTE_112_2    ; 12
+	const FRUITTREE_ROUTE_112_3    ; 13
 	const FRUITTREE_AZALEA_TOWN   ; 14
-	const FRUITTREE_ROUTE_42_1    ; 15
-	const FRUITTREE_ROUTE_42_2    ; 16
-	const FRUITTREE_ROUTE_42_3    ; 17
+	const FRUITTREE_ROUTE_117_1    ; 15
+	const FRUITTREE_ROUTE_117_2    ; 16
+	const FRUITTREE_ROUTE_117_3    ; 17
 	const FRUITTREE_ROUTE_11      ; 18
 	const FRUITTREE_ROUTE_2       ; 19
 	const FRUITTREE_ROUTE_1       ; 1a

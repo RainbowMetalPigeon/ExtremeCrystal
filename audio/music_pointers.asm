@@ -46,7 +46,7 @@ Music:
 	dba Music_UnionCave
 	dba Music_JohtoWildBattle
 	dba Music_JohtoTrainerBattle
-	dba Music_Route30
+	dba Music_Route105
 	dba Music_EcruteakCity
 	dba Music_VioletCity
 	dba Music_JohtoGymBattle
@@ -55,8 +55,8 @@ Music:
 	dba Music_RocketBattle
 	dba Music_ElmsLab
 	dba Music_DarkCave
-	dba Music_Route29
-	dba Music_Route36
+	dba Music_Route104
+	dba Music_Route111
 	dba Music_SSAqua
 	dba Music_LookYoungster
 	dba Music_LookBeauty
@@ -74,13 +74,13 @@ Music:
 	dba Music_Lighthouse
 	dba Music_LakeOfRage
 	dba Music_IndigoPlateau
-	dba Music_Route37
+	dba Music_Route112
 	dba Music_RocketHideout
 	dba Music_DragonsDen
 	dba Music_JohtoWildBattleNight
 	dba Music_RuinsOfAlphRadio
 	dba Music_SuccessfulCapture
-	dba Music_Route26
+	dba Music_Route101
 	dba Music_Mom
 	dba Music_VictoryRoad
 	dba Music_PokemonLullaby

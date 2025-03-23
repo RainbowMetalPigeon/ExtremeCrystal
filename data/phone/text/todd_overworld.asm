@@ -58,7 +58,7 @@ ToddRematchText:
 	done
 
 ToddSaleText: ; unreferenced
-; This is a duplicate of CamperToddSaleText in maps/Route34.asm.
+; This is a duplicate of CamperToddSaleText in maps/Route109.asm.
 	text "Shopping under the"
 	line "sky!"
 

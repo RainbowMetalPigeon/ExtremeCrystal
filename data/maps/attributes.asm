@@ -98,137 +98,137 @@ ENDM
 
 
 	map_attributes NewBarkTown, NEW_BARK_TOWN, $05, SOUTH | WEST | EAST ; edited
-	connection south, Route119, ROUTE_119, -2 ; new
-	connection west, Route29, ROUTE_29, 0
-	connection east, Route27, ROUTE_27, 0
+	connection south, Route122, ROUTE_122, -2 ; new
+	connection west, Route104, ROUTE_104, 0
+	connection east, Route102, ROUTE_102, 0
 
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35, NORTH | EAST
-	connection north, Route30, ROUTE_30, 5
-	connection east, Route29, ROUTE_29, 0
+	connection north, Route105, ROUTE_105, 5
+	connection east, Route104, ROUTE_104, 0
 
 	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST
-	connection south, Route32, ROUTE_32, 0
-	connection west, Route36, ROUTE_36, 0
-	connection east, Route31, ROUTE_31, 9
+	connection south, Route107, ROUTE_107, 0
+	connection west, Route111, ROUTE_111, 0
+	connection east, Route106, ROUTE_106, 9
 
 	map_attributes AzaleaTown, AZALEA_TOWN, $05, WEST | EAST
-	connection west, Route34, ROUTE_34, -18
-	connection east, Route33, ROUTE_33, 0
+	connection west, Route109, ROUTE_109, -18
+	connection east, Route108, ROUTE_108, 0
 
 	map_attributes CianwoodCity, CIANWOOD_CITY, $35, EAST
-	connection east, Route41, ROUTE_41, 0
+	connection east, Route116, ROUTE_116, 0
 
 	map_attributes GoldenrodCity, GOLDENROD_CITY, $35, NORTH | SOUTH
-	connection north, Route35, ROUTE_35, 5
-	connection south, Route34, ROUTE_34, 5
+	connection north, Route110, ROUTE_110, 5
+	connection south, Route109, ROUTE_109, 5
 
 	map_attributes OlivineCity, OLIVINE_CITY, $35, NORTH | WEST
-	connection north, Route39, ROUTE_39, 5
-	connection west, Route40, ROUTE_40, 9
+	connection north, Route114, ROUTE_39, 5
+	connection west, Route115, ROUTE_115, 9
 
 	map_attributes EcruteakCity, ECRUTEAK_CITY, $05, SOUTH | WEST | EAST
-	connection south, Route37, ROUTE_37, 5
-	connection west, Route38, ROUTE_38, 5
-	connection east, Route42, ROUTE_42, 9
+	connection south, Route112, ROUTE_112, 5
+	connection west, Route113, ROUTE_113, 5
+	connection east, Route117, ROUTE_117, 9
 
 	map_attributes MahoganyTown, MAHOGANY_TOWN, $71, NORTH | WEST | EAST
-	connection north, Route43, ROUTE_43, 0
-	connection west, Route42, ROUTE_42, 0
-	connection east, Route44, ROUTE_44, 0
+	connection north, Route118, ROUTE_118, 0
+	connection west, Route117, ROUTE_117, 0
+	connection east, Route119, ROUTE_44, 0
 
 	map_attributes LakeOfRage, LAKE_OF_RAGE, $05, SOUTH
-	connection south, Route43, ROUTE_43, 5
+	connection south, Route118, ROUTE_118, 5
 
 	map_attributes BlackthornCity, BLACKTHORN_CITY, $71, SOUTH | WEST
-	connection south, Route45, ROUTE_45, 0
-	connection west, Route44, ROUTE_44, 9
+	connection south, Route120, ROUTE_120, 0
+	connection west, Route119, ROUTE_44, 9
 
 	map_attributes SilverCaveOutside, SILVER_CAVE_OUTSIDE, $2c, EAST
-	connection east, Route28, ROUTE_28, 9
+	connection east, Route103, ROUTE_103, 9
 
-	map_attributes Route26, ROUTE_26, $05, WEST
-	connection west, Route27, ROUTE_27, 45
+	map_attributes Route101, ROUTE_101, $05, WEST
+	connection west, Route102, ROUTE_102, 45
 
-	map_attributes Route27, ROUTE_27, $35, WEST | EAST
+	map_attributes Route102, ROUTE_102, $35, WEST | EAST
 	connection west, NewBarkTown, NEW_BARK_TOWN, 0
-	connection east, Route26, ROUTE_26, -45
+	connection east, Route101, ROUTE_101, -45
 
-	map_attributes Route28, ROUTE_28, $2c, WEST
+	map_attributes Route103, ROUTE_103, $2c, WEST
 	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -9
 
-	map_attributes Route29, ROUTE_29, $05, NORTH | WEST | EAST
-	connection north, Route46, ROUTE_46, 10
+	map_attributes Route104, ROUTE_104, $05, NORTH | WEST | EAST
+	connection north, Route121, ROUTE_121, 10
 	connection west, CherrygroveCity, CHERRYGROVE_CITY, 0
 	connection east, NewBarkTown, NEW_BARK_TOWN, 0
 
-	map_attributes Route30, ROUTE_30, $05, NORTH | SOUTH
-	connection north, Route31, ROUTE_31, -10
+	map_attributes Route105, ROUTE_105, $05, NORTH | SOUTH
+	connection north, Route106, ROUTE_106, -10
 	connection south, CherrygroveCity, CHERRYGROVE_CITY, -5
 
-	map_attributes Route31, ROUTE_31, $05, SOUTH | WEST
-	connection south, Route30, ROUTE_30, 10
+	map_attributes Route106, ROUTE_106, $05, SOUTH | WEST
+	connection south, Route105, ROUTE_105, 10
 	connection west, VioletCity, VIOLET_CITY, -9
 
-	map_attributes Route32, ROUTE_32, $05, NORTH | SOUTH
+	map_attributes Route107, ROUTE_107, $05, NORTH | SOUTH
 	connection north, VioletCity, VIOLET_CITY, 0
-	connection south, Route33, ROUTE_33, 0
+	connection south, Route108, ROUTE_108, 0
 
-	map_attributes Route33, ROUTE_33, $05, NORTH | WEST
-	connection north, Route32, ROUTE_32, 0
+	map_attributes Route108, ROUTE_108, $05, NORTH | WEST
+	connection north, Route107, ROUTE_107, 0
 	connection west, AzaleaTown, AZALEA_TOWN, 0
 
-	map_attributes Route34, ROUTE_34, $05, NORTH | EAST
+	map_attributes Route109, ROUTE_109, $05, NORTH | EAST
 	connection north, GoldenrodCity, GOLDENROD_CITY, -5
 	connection east, AzaleaTown, AZALEA_TOWN, 18
 
-	map_attributes Route35, ROUTE_35, $05, NORTH | SOUTH
-	connection north, Route36, ROUTE_36, 0
+	map_attributes Route110, ROUTE_110, $05, NORTH | SOUTH
+	connection north, Route111, ROUTE_111, 0
 	connection south, GoldenrodCity, GOLDENROD_CITY, -5
 
-	map_attributes Route36, ROUTE_36, $05, NORTH | SOUTH | EAST
-	connection north, Route37, ROUTE_37, 10
-	connection south, Route35, ROUTE_35, 0
+	map_attributes Route111, ROUTE_111, $05, NORTH | SOUTH | EAST
+	connection north, Route112, ROUTE_112, 10
+	connection south, Route110, ROUTE_110, 0
 	connection east, VioletCity, VIOLET_CITY, 0
 
-	map_attributes Route37, ROUTE_37, $05, NORTH | SOUTH
+	map_attributes Route112, ROUTE_112, $05, NORTH | SOUTH
 	connection north, EcruteakCity, ECRUTEAK_CITY, -5
-	connection south, Route36, ROUTE_36, -10
+	connection south, Route111, ROUTE_111, -10
 
-	map_attributes Route38, ROUTE_38, $05, WEST | EAST
-	connection west, Route39, ROUTE_39, 0
+	map_attributes Route113, ROUTE_113, $05, WEST | EAST
+	connection west, Route114, ROUTE_39, 0
 	connection east, EcruteakCity, ECRUTEAK_CITY, -5
 
-	map_attributes Route39, ROUTE_39, $05, SOUTH | EAST
+	map_attributes Route114, ROUTE_39, $05, SOUTH | EAST
 	connection south, OlivineCity, OLIVINE_CITY, -5
-	connection east, Route38, ROUTE_38, 0
+	connection east, Route113, ROUTE_113, 0
 
-	map_attributes Route40, ROUTE_40, $35, SOUTH | EAST
-	connection south, Route41, ROUTE_41, -15
+	map_attributes Route115, ROUTE_115, $35, SOUTH | EAST
+	connection south, Route116, ROUTE_116, -15
 	connection east, OlivineCity, OLIVINE_CITY, -9
 
-	map_attributes Route41, ROUTE_41, $35, NORTH | WEST
-	connection north, Route40, ROUTE_40, 15
+	map_attributes Route116, ROUTE_116, $35, NORTH | WEST
+	connection north, Route115, ROUTE_115, 15
 	connection west, CianwoodCity, CIANWOOD_CITY, 0
 
-	map_attributes Route42, ROUTE_42, $05, WEST | EAST
+	map_attributes Route117, ROUTE_117, $05, WEST | EAST
 	connection west, EcruteakCity, ECRUTEAK_CITY, -9
 	connection east, MahoganyTown, MAHOGANY_TOWN, 0
 
-	map_attributes Route43, ROUTE_43, $05, NORTH | SOUTH
+	map_attributes Route118, ROUTE_118, $05, NORTH | SOUTH
 	connection north, LakeOfRage, LAKE_OF_RAGE, -5
 	connection south, MahoganyTown, MAHOGANY_TOWN, 0
 
-	map_attributes Route44, ROUTE_44, $71, WEST | EAST
+	map_attributes Route119, ROUTE_44, $71, WEST | EAST
 	connection west, MahoganyTown, MAHOGANY_TOWN, 0
 	connection east, BlackthornCity, BLACKTHORN_CITY, -9
 
-	map_attributes Route45, ROUTE_45, $71, NORTH | WEST
+	map_attributes Route120, ROUTE_120, $71, NORTH | WEST
 	connection north, BlackthornCity, BLACKTHORN_CITY, 0
-	connection west, Route46, ROUTE_46, 36
+	connection west, Route121, ROUTE_121, 36
 
-	map_attributes Route46, ROUTE_46, $05, SOUTH | EAST
-	connection south, Route29, ROUTE_29, -10
-	connection east, Route45, ROUTE_45, -36
+	map_attributes Route121, ROUTE_121, $05, SOUTH | EAST
+	connection south, Route104, ROUTE_104, -10
+	connection east, Route120, ROUTE_120, -36
 
 	map_attributes PewterCity, PEWTER_CITY, $0f, SOUTH | EAST
 	connection south, Route2, ROUTE_2, 5
@@ -468,13 +468,13 @@ ENDM
 	map_attributes OlivineGoodRodHouse, OLIVINE_GOOD_ROD_HOUSE, $00, 0
 	map_attributes OlivineCafe, OLIVINE_CAFE, $00, 0
 	map_attributes OlivineMart, OLIVINE_MART, $00, 0
-	map_attributes Route38EcruteakGate, ROUTE_38_ECRUTEAK_GATE, $00, 0
-	map_attributes Route39Barn, ROUTE_39_BARN, $00, 0
-	map_attributes Route39Farmhouse, ROUTE_39_FARMHOUSE, $00, 0
+	map_attributes Route113EcruteakGate, ROUTE_113_ECRUTEAK_GATE, $00, 0
+	map_attributes Route114Barn, ROUTE_39_BARN, $00, 0
+	map_attributes Route114Farmhouse, ROUTE_39_FARMHOUSE, $00, 0
 	map_attributes MahoganyRedGyaradosSpeechHouse, MAHOGANY_RED_GYARADOS_SPEECH_HOUSE, $00, 0
 	map_attributes MahoganyGym, MAHOGANY_GYM, $00, 0
 	map_attributes MahoganyPokecenter1F, MAHOGANY_POKECENTER_1F, $00, 0
-	map_attributes Route42EcruteakGate, ROUTE_42_ECRUTEAK_GATE, $00, 0
+	map_attributes Route117EcruteakGate, ROUTE_117_ECRUTEAK_GATE, $00, 0
 	map_attributes DiglettsCave, DIGLETTS_CAVE, $09, 0
 	map_attributes MountMoon, MOUNT_MOON, $09, 0
 	map_attributes UndergroundPath, UNDERGROUND_PATH, $00, 0
@@ -520,20 +520,20 @@ ENDM
 	map_attributes AzaleaGym, AZALEA_GYM, $00, 0
 	map_attributes LakeOfRageHiddenPowerHouse, LAKE_OF_RAGE_HIDDEN_POWER_HOUSE, $00, 0
 	map_attributes LakeOfRageMagikarpHouse, LAKE_OF_RAGE_MAGIKARP_HOUSE, $00, 0
-	map_attributes Route43MahoganyGate, ROUTE_43_MAHOGANY_GATE, $00, 0
-	map_attributes Route43Gate, ROUTE_43_GATE, $00, 0
+	map_attributes Route118MahoganyGate, ROUTE_118_MAHOGANY_GATE, $00, 0
+	map_attributes Route118Gate, ROUTE_118_GATE, $00, 0
 	map_attributes VioletMart, VIOLET_MART, $00, 0
 	map_attributes VioletGym, VIOLET_GYM, $00, 0
 	map_attributes EarlsPokemonAcademy, EARLS_POKEMON_ACADEMY, $00, 0
 	map_attributes VioletNicknameSpeechHouse, VIOLET_NICKNAME_SPEECH_HOUSE, $00, 0
 	map_attributes VioletPokecenter1F, VIOLET_POKECENTER_1F, $00, 0
 	map_attributes VioletKylesHouse, VIOLET_KYLES_HOUSE, $00, 0
-	map_attributes Route32RuinsOfAlphGate, ROUTE_32_RUINS_OF_ALPH_GATE, $00, 0
-	map_attributes Route32Pokecenter1F, ROUTE_32_POKECENTER_1F, $00, 0
-	map_attributes Route35GoldenrodGate, ROUTE_35_GOLDENROD_GATE, $00, 0
-	map_attributes Route35NationalParkGate, ROUTE_35_NATIONAL_PARK_GATE, $00, 0
-	map_attributes Route36RuinsOfAlphGate, ROUTE_36_RUINS_OF_ALPH_GATE, $00, 0
-	map_attributes Route36NationalParkGate, ROUTE_36_NATIONAL_PARK_GATE, $00, 0
+	map_attributes Route107RuinsOfAlphGate, ROUTE_107_RUINS_OF_ALPH_GATE, $00, 0
+	map_attributes Route107Pokecenter1F, ROUTE_107_POKECENTER_1F, $00, 0
+	map_attributes Route110GoldenrodGate, ROUTE_110_GOLDENROD_GATE, $00, 0
+	map_attributes Route110NationalParkGate, ROUTE_110_NATIONAL_PARK_GATE, $00, 0
+	map_attributes Route111RuinsOfAlphGate, ROUTE_111_RUINS_OF_ALPH_GATE, $00, 0
+	map_attributes Route111NationalParkGate, ROUTE_111_NATIONAL_PARK_GATE, $00, 0
 	map_attributes GoldenrodGym, GOLDENROD_GYM, $00, 0
 	map_attributes GoldenrodBikeShop, GOLDENROD_BIKE_SHOP, $00, 0
 	map_attributes GoldenrodHappinessRater, GOLDENROD_HAPPINESS_RATER, $00, 0
@@ -554,7 +554,7 @@ ENDM
 	map_attributes GoldenrodPokecenter1F, GOLDENROD_POKECENTER_1F, $00, 0
 	map_attributes PokecomCenterAdminOfficeMobile, POKECOM_CENTER_ADMIN_OFFICE_MOBILE, $00, 0
 	map_attributes IlexForestAzaleaGate, ILEX_FOREST_AZALEA_GATE, $00, 0
-	map_attributes Route34IlexForestGate, ROUTE_34_ILEX_FOREST_GATE, $00, 0
+	map_attributes Route109IlexForestGate, ROUTE_109_ILEX_FOREST_GATE, $00, 0
 	map_attributes DayCare, DAY_CARE, $00, 0
 	map_attributes VermilionFishingSpeechHouse, VERMILION_FISHING_SPEECH_HOUSE, $00, 0
 	map_attributes VermilionPokecenter1F, VERMILION_POKECENTER_1F, $00, 0
@@ -614,7 +614,7 @@ ENDM
 	map_attributes Route8SaffronGate, ROUTE_8_SAFFRON_GATE, $00, 0
 	map_attributes Route12SuperRodHouse, ROUTE_12_SUPER_ROD_HOUSE, $00, 0
 	map_attributes SilverCavePokecenter1F, SILVER_CAVE_POKECENTER_1F, $00, 0
-	map_attributes Route28SteelWingHouse, ROUTE_28_STEEL_WING_HOUSE, $00, 0
+	map_attributes Route103SteelWingHouse, ROUTE_103_STEEL_WING_HOUSE, $00, 0
 	map_attributes Pokecenter2F, POKECENTER_2F, $00, 0
 	map_attributes TradeCenter, TRADE_CENTER, $00, 0
 	map_attributes Colosseum, COLOSSEUM, $00, 0
@@ -654,7 +654,7 @@ ENDM
 	map_attributes BattleTowerBattleRoom, BATTLE_TOWER_BATTLE_ROOM, $00, 0
 	map_attributes BattleTowerElevator, BATTLE_TOWER_ELEVATOR, $00, 0
 	map_attributes BattleTowerHallway, BATTLE_TOWER_HALLWAY, $00, 0
-	map_attributes Route40BattleTowerGate, ROUTE_40_BATTLE_TOWER_GATE, $00, 0
+	map_attributes Route115BattleTowerGate, ROUTE_115_BATTLE_TOWER_GATE, $00, 0
 	map_attributes BattleTowerOutside, BATTLE_TOWER_OUTSIDE, $05, 0
 	map_attributes ViridianGym, VIRIDIAN_GYM, $00, 0
 	map_attributes ViridianNicknameSpeechHouse, VIRIDIAN_NICKNAME_SPEECH_HOUSE, $00, 0
@@ -671,10 +671,10 @@ ENDM
 	map_attributes PlayersHouse2F, PLAYERS_HOUSE_2F, $00, 0
 	map_attributes PlayersNeighborsHouse, PLAYERS_NEIGHBORS_HOUSE, $00, 0
 	map_attributes ElmsHouse, ELMS_HOUSE, $00, 0
-	map_attributes Route26HealHouse, ROUTE_26_HEAL_HOUSE, $00, 0
+	map_attributes Route101HealHouse, ROUTE_101_HEAL_HOUSE, $00, 0
 	map_attributes DayOfWeekSiblingsHouse, DAY_OF_WEEK_SIBLINGS_HOUSE, $00, 0
-	map_attributes Route27SandstormHouse, ROUTE_27_SANDSTORM_HOUSE, $00, 0
-	map_attributes Route29Route46Gate, ROUTE_29_ROUTE_46_GATE, $00, 0
+	map_attributes Route102SandstormHouse, ROUTE_102_SANDSTORM_HOUSE, $00, 0
+	map_attributes Route104Route121Gate, ROUTE_104_ROUTE_121_GATE, $00, 0
 	map_attributes FightingDojo, FIGHTING_DOJO, $00, 0
 	map_attributes SaffronGym, SAFFRON_GYM, $00, 0
 	map_attributes SaffronMart, SAFFRON_MART, $00, 0
@@ -693,12 +693,12 @@ ENDM
 	map_attributes CherrygroveGymSpeechHouse, CHERRYGROVE_GYM_SPEECH_HOUSE, $00, 0
 	map_attributes GuideGentsHouse, GUIDE_GENTS_HOUSE, $00, 0
 	map_attributes CherrygroveEvolutionSpeechHouse, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, $00, 0
-	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
+	map_attributes Route105BerryHouse, ROUTE_105_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
-	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
+	map_attributes Route106VioletGate, ROUTE_106_VIOLET_GATE, $00, 0
 
 ; new maps
 
-	map_attributes Route119, ROUTE_119, $35, NORTH
+	map_attributes Route122, ROUTE_122, $35, NORTH
 	connection north, NewBarkTown, NEW_BARK_TOWN, 2
 

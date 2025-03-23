@@ -450,7 +450,7 @@ IlexForestShrineScript:
 	clearevent EVENT_FOREST_IS_RESTLESS
 	setevent EVENT_AZALEA_TOWN_KURT
 	disappear ILEXFOREST_LASS
-	clearevent EVENT_ROUTE_34_ILEX_FOREST_GATE_LASS
+	clearevent EVENT_ROUTE_109_ILEX_FOREST_GATE_LASS
 	writetext Text_InsertGSBall
 	waitbutton
 	closetext
@@ -938,7 +938,7 @@ IlexForest_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  1,  5, ROUTE_34_ILEX_FOREST_GATE, 3
+	warp_event  1,  5, ROUTE_109_ILEX_FOREST_GATE, 3
 	warp_event  3, 42, ILEX_FOREST_AZALEA_GATE, 1
 	warp_event  3, 43, ILEX_FOREST_AZALEA_GATE, 2
 

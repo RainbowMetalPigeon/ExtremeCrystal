@@ -31,7 +31,7 @@ SwarmGrassWildMons:
 	dbw 4, DUNSPARCE
 
 ; Yanma swarm
-	map_id ROUTE_35
+	map_id ROUTE_110
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 12, NIDORAN_M

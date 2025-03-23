@@ -1237,7 +1237,7 @@ JohtoGrassWildMons:
 	dbw 23, GOLBAT
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_29
+	def_grass_wildmons ROUTE_104
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 2, PIDGEY
@@ -1265,7 +1265,7 @@ JohtoGrassWildMons:
 	dbw 3, HOOTHOOT
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_30
+	def_grass_wildmons ROUTE_105
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 3, LEDYBA
@@ -1293,7 +1293,7 @@ JohtoGrassWildMons:
 	dbw 4, HOOTHOOT
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_31
+	def_grass_wildmons ROUTE_106
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 4, LEDYBA
@@ -1321,7 +1321,7 @@ JohtoGrassWildMons:
 	dbw 5, GASTLY
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_32
+	def_grass_wildmons ROUTE_107
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 4, EKANS
@@ -1349,7 +1349,7 @@ JohtoGrassWildMons:
 	dbw 7, GASTLY
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_33
+	def_grass_wildmons ROUTE_108
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 6, RATTATA
@@ -1377,7 +1377,7 @@ JohtoGrassWildMons:
 	dbw 7, RATTATA
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_34
+	def_grass_wildmons ROUTE_109
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 10, SNUBBULL
@@ -1405,7 +1405,7 @@ JohtoGrassWildMons:
 	dbw 10, DITTO
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_35
+	def_grass_wildmons ROUTE_110
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 12, SNUBBULL
@@ -1433,7 +1433,7 @@ JohtoGrassWildMons:
 	dbw 12, YANMA
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_36
+	def_grass_wildmons ROUTE_111
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 4, LEDYBA
@@ -1461,7 +1461,7 @@ JohtoGrassWildMons:
 	dbw 5, GASTLY
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_37
+	def_grass_wildmons ROUTE_112
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 13, LEDYBA
@@ -1489,7 +1489,7 @@ JohtoGrassWildMons:
 	dbw 15, ARIADOS
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_38
+	def_grass_wildmons ROUTE_113
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 16, RATTATA
@@ -1545,7 +1545,7 @@ JohtoGrassWildMons:
 	dbw 18, MEOWTH
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_42
+	def_grass_wildmons ROUTE_117
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 13, EKANS
@@ -1573,7 +1573,7 @@ JohtoGrassWildMons:
 	dbw 16, GOLBAT
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_43
+	def_grass_wildmons ROUTE_118
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 15, SENTRET
@@ -1629,7 +1629,7 @@ JohtoGrassWildMons:
 	dbw 26, POLIWHIRL
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_45
+	def_grass_wildmons ROUTE_120
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 23, GEODUDE
@@ -1657,7 +1657,7 @@ JohtoGrassWildMons:
 	dbw 27, GRAVELER
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_46
+	def_grass_wildmons ROUTE_121
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 2, GEODUDE
@@ -1715,7 +1715,7 @@ JohtoGrassWildMons:
 
 ; new ----------------------------------------------
 
-	def_grass_wildmons ROUTE_119
+	def_grass_wildmons ROUTE_122
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 12, SENTRET  ; 30

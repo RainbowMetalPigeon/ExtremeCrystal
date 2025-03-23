@@ -12,12 +12,12 @@ DayCareEggCheckCallback:
 	checkflag ENGINE_DAY_CARE_MAN_HAS_EGG
 	iftrue .PutDayCareManOutside
 	clearevent EVENT_DAY_CARE_MAN_IN_DAY_CARE
-	setevent EVENT_DAY_CARE_MAN_ON_ROUTE_34
+	setevent EVENT_DAY_CARE_MAN_ON_ROUTE_109
 	endcallback
 
 .PutDayCareManOutside:
 	setevent EVENT_DAY_CARE_MAN_IN_DAY_CARE
-	clearevent EVENT_DAY_CARE_MAN_ON_ROUTE_34
+	clearevent EVENT_DAY_CARE_MAN_ON_ROUTE_109
 	endcallback
 
 DayCareManScript_Inside:
@@ -157,10 +157,10 @@ DayCare_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  0,  5, ROUTE_34, 3
-	warp_event  0,  6, ROUTE_34, 4
-	warp_event  2,  7, ROUTE_34, 5
-	warp_event  3,  7, ROUTE_34, 5
+	warp_event  0,  5, ROUTE_109, 3
+	warp_event  0,  6, ROUTE_109, 4
+	warp_event  2,  7, ROUTE_109, 5
+	warp_event  3,  7, ROUTE_109, 5
 
 	def_coord_events
 

@@ -100,21 +100,21 @@ KantoWaterWildMons:
 	dbw 10, SEAKING
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_26
+	def_water_wildmons ROUTE_101
 	db 6 percent ; encounter rate
 	dbw 30, TENTACOOL
 	dbw 25, TENTACOOL
 	dbw 30, TENTACRUEL
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_27
+	def_water_wildmons ROUTE_102
 	db 6 percent ; encounter rate
 	dbw 20, TENTACOOL
 	dbw 15, TENTACOOL
 	dbw 20, TENTACRUEL
 	end_water_wildmons
 
-	def_water_wildmons ROUTE_28
+	def_water_wildmons ROUTE_103
 	db 2 percent ; encounter rate
 	dbw 40, POLIWAG
 	dbw 35, POLIWAG

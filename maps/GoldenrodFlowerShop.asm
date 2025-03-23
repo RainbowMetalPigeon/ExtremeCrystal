@@ -44,7 +44,7 @@ FlowerShopTeacherScript:
 	jumptextfaceplayer GoldenrodFlowerShopTeacherAskWantToBorrowWaterBottleText
 
 .HaventMetFloria:
-	jumptextfaceplayer GoldenrodFlowerShopTeacherMySisterWentToSeeWigglyTreeRoute36Text
+	jumptextfaceplayer GoldenrodFlowerShopTeacherMySisterWentToSeeWigglyTreeRoute111Text
 
 FlowerShopFloriaScript:
 	faceplayer
@@ -82,7 +82,7 @@ FlowerShopShelf2: ; unreferenced
 FlowerShopRadio: ; unreferenced
 	jumpstd Radio2Script
 
-GoldenrodFlowerShopTeacherMySisterWentToSeeWigglyTreeRoute36Text:
+GoldenrodFlowerShopTeacherMySisterWentToSeeWigglyTreeRoute111Text:
 	text "Have you seen that"
 	line "wiggly tree that's"
 

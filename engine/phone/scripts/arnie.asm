@@ -16,11 +16,11 @@ ArniePhoneCalleeScript:
 	farsjump ArnieHangUpScript
 
 .WantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_35
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_110
 	farsjump ArnieReminderScript
 
 .AlreadySwarming:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_35
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_110
 	farsjump ArnieHurryScript
 
 ArniePhoneCallerScript:
@@ -44,7 +44,7 @@ ArnieTuesdayMorning:
 	setflag ENGINE_ARNIE_TUESDAY_MORNING
 
 ArnieWantsBattle:
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_35
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_110
 	setflag ENGINE_ARNIE_READY_FOR_REMATCH
 	farsjump PhoneScript_WantsToBattle_Male
 
@@ -53,8 +53,8 @@ ArnieYanmaSwarm: ; start swarm
 	iftrue ArnieYanmaAlreadySwarming
 	setflag ENGINE_YANMA_SWARM
 	getmonname STRING_BUFFER_4, YANMA
-	swarm SWARM_YANMA, ROUTE_35
-	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_35
+	swarm SWARM_YANMA, ROUTE_110
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_110
 	farsjump ArnieSwarmScript
 
 ArnieFoundRare:

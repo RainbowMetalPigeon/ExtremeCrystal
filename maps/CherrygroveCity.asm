@@ -50,7 +50,7 @@ CherrygroveCityGuideGent:
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement3
 	turnobject PLAYER, UP
 	opentext
-	writetext GuideGentRoute30Text
+	writetext GuideGentRoute105Text
 	waitbutton
 	closetext
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement4
@@ -377,8 +377,8 @@ GuideGentMartText:
 	line "useful items."
 	done
 
-GuideGentRoute30Text:
-	text "ROUTE 30 is out"
+GuideGentRoute105Text:
+	text "ROUTE 105 is out"
 	line "this way."
 
 	para "Trainers will be"

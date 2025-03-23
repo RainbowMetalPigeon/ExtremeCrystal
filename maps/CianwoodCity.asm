@@ -48,8 +48,8 @@ CianwoodCitySuicuneAndEusine:
 	disappear CIANWOODCITY_SUICUNE
 	pause 10
 	setscene SCENE_CIANWOODCITY_NOOP
-	clearevent EVENT_SAW_SUICUNE_ON_ROUTE_42
-	setmapscene ROUTE_42, SCENE_ROUTE42_SUICUNE
+	clearevent EVENT_SAW_SUICUNE_ON_ROUTE_117
+	setmapscene ROUTE_117, SCENE_ROUTE117_SUICUNE
 	checkevent EVENT_FOUGHT_EUSINE
 	iftrue .Done
 	setevent EVENT_FOUGHT_EUSINE
