@@ -37,27 +37,27 @@ MeetMomScript:
 
 ; new temporary debug stuff ---------------------------------
 
-;	givepoke CELEBI, 42
-;	givepoke MEW, 42
+	givepoke CELEBI, 42
+	givepoke MEW, 42
 
-;	callasm .asm_give_moves
+	callasm .asm_give_moves
 
-;	setflag ENGINE_ZEPHYRBADGE
-;	setflag ENGINE_HIVEBADGE
-;	setflag ENGINE_PLAINBADGE
-;	setflag ENGINE_FOGBADGE
-;	setflag ENGINE_STORMBADGE
-;	setflag ENGINE_MINERALBADGE
-;	setflag ENGINE_GLACIERBADGE
-;	setflag ENGINE_RISINGBADGE
-;	setflag ENGINE_BOULDERBADGE
-;	setflag ENGINE_CASCADEBADGE
-;	setflag ENGINE_THUNDERBADGE
-;	setflag ENGINE_RAINBOWBADGE
-;	setflag ENGINE_MARSHBADGE
-;	setflag ENGINE_SOULBADGE
-;	setflag ENGINE_VOLCANOBADGE
-;	setflag ENGINE_EARTHBADGE
+	setflag ENGINE_ZEPHYRBADGE
+	setflag ENGINE_HIVEBADGE
+	setflag ENGINE_PLAINBADGE
+	setflag ENGINE_FOGBADGE
+	setflag ENGINE_STORMBADGE
+	setflag ENGINE_MINERALBADGE
+	setflag ENGINE_GLACIERBADGE
+	setflag ENGINE_RISINGBADGE
+	setflag ENGINE_BOULDERBADGE
+	setflag ENGINE_CASCADEBADGE
+	setflag ENGINE_THUNDERBADGE
+	setflag ENGINE_RAINBOWBADGE
+	setflag ENGINE_MARSHBADGE
+	setflag ENGINE_SOULBADGE
+	setflag ENGINE_VOLCANOBADGE
+	setflag ENGINE_EARTHBADGE
 ;	setevent EVENT_BEAT_FALKNER
 ;	setevent EVENT_BEAT_BUGSY
 ;	setevent EVENT_BEAT_WHITNEY
