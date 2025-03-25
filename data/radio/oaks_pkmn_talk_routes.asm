@@ -12,7 +12,7 @@ OaksPKMNTalkRoutes:
 	map_id ROUTE_39
 	map_id ROUTE_117
 	map_id ROUTE_118
-	map_id ROUTE_44
+	map_id ROUTE_119
 	map_id ROUTE_120
 	map_id ROUTE_111
 	map_id ROUTE_106

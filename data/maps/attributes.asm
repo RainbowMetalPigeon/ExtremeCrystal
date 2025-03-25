@@ -96,7 +96,6 @@ MACRO connection
 	endc
 ENDM
 
-
 	map_attributes NewBarkTown, NEW_BARK_TOWN, $05, SOUTH | WEST | EAST ; edited
 	connection south, Route122, ROUTE_122, -2 ; new
 	connection west, Route104, ROUTE_104, 0
@@ -134,14 +133,14 @@ ENDM
 	map_attributes MahoganyTown, MAHOGANY_TOWN, $71, NORTH | WEST | EAST
 	connection north, Route118, ROUTE_118, 0
 	connection west, Route117, ROUTE_117, 0
-	connection east, Route119, ROUTE_44, 0
+	connection east, Route119, ROUTE_119, 0
 
 	map_attributes LakeOfRage, LAKE_OF_RAGE, $05, SOUTH
 	connection south, Route118, ROUTE_118, 5
 
 	map_attributes BlackthornCity, BLACKTHORN_CITY, $71, SOUTH | WEST
 	connection south, Route120, ROUTE_120, 0
-	connection west, Route119, ROUTE_44, 9
+	connection west, Route119, ROUTE_119, 9
 
 	map_attributes SilverCaveOutside, SILVER_CAVE_OUTSIDE, $2c, EAST
 	connection east, Route103, ROUTE_103, 9
@@ -169,9 +168,10 @@ ENDM
 	connection south, Route105, ROUTE_105, 10
 	connection west, VioletCity, VIOLET_CITY, -9
 
-	map_attributes Route107, ROUTE_107, $05, NORTH | SOUTH
+	map_attributes Route107, ROUTE_107, $05, NORTH | SOUTH | WEST ; edited
 	connection north, VioletCity, VIOLET_CITY, 0
 	connection south, Route108, ROUTE_108, 0
+	connection west, Route123, ROUTE_123, 19 ; new
 
 	map_attributes Route108, ROUTE_108, $05, NORTH | WEST
 	connection north, Route107, ROUTE_107, 0
@@ -218,7 +218,7 @@ ENDM
 	connection north, LakeOfRage, LAKE_OF_RAGE, -5
 	connection south, MahoganyTown, MAHOGANY_TOWN, 0
 
-	map_attributes Route119, ROUTE_44, $71, WEST | EAST
+	map_attributes Route119, ROUTE_119, $71, WEST | EAST
 	connection west, MahoganyTown, MAHOGANY_TOWN, 0
 	connection east, BlackthornCity, BLACKTHORN_CITY, -9
 
@@ -698,7 +698,18 @@ ENDM
 	map_attributes Route106VioletGate, ROUTE_106_VIOLET_GATE, $00, 0
 
 ; new maps
+; NORTH | SOUTH | WEST | EAST
 
 	map_attributes Route122, ROUTE_122, $35, NORTH
 	connection north, NewBarkTown, NEW_BARK_TOWN, 2
 
+	map_attributes ElderfernTown, ELDERFERN_TOWN, $71, EAST
+	connection east, Route123, ROUTE_123, 5
+
+	map_attributes Route123, ROUTE_123, $05, WEST, EAST
+	connection west, ElderfernTown, ELDERFERN_TOWN, -5
+	connection east, Route107, ROUTE_107, -19
+
+; new maps without connections
+
+	map_attributes Route107Route123Gate, ROUTE_107_ROUTE_123_GATE, $00, 0

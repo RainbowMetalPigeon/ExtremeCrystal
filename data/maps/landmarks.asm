@@ -18,7 +18,7 @@ Landmarks:
 	landmark  84,  92, Route107Name
 	landmark  76,  76, RuinsOfAlphName
 	landmark  84, 124, UnionCaveName
-	landmark  82, 124, Route108Name
+	landmark  76, 124, Route108Name
 	landmark  68, 124, AzaleaTownName
 	landmark  70, 122, SlowpokeWellName
 	landmark  52, 120, IlexForestName
@@ -55,6 +55,8 @@ Landmarks:
 	landmark 124,  88, Route121Name
 	landmark 148,  68, SilverCaveName
 	landmark 140, 124, Route122Name ; new
+	landmark  76,  92, Route123Name ; new
+	landmark  68,  92, ElderfernTownName ; new
 
 	assert_table_length KANTO_LANDMARK
 	landmark  52, 108, PalletTownName
@@ -214,3 +216,5 @@ SpecialMapName:      db "SPECIAL@"
 ; new -----------------------------------------------------
 
 Route122Name:        db "ROUTE 122@"
+Route123Name:        db "ROUTE 123@"
+ElderfernTownName:   db "ELDERFERN<BSP>TOWN@"

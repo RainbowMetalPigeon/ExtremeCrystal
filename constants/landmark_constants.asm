@@ -3,52 +3,54 @@
 	const LANDMARK_SPECIAL           ; 00
 ; Johto landmarks
 	const LANDMARK_NEW_BARK_TOWN     ; 01
-	const LANDMARK_ROUTE_104          ; 02
+	const LANDMARK_ROUTE_104         ; 02
 	const LANDMARK_CHERRYGROVE_CITY  ; 03
-	const LANDMARK_ROUTE_105          ; 04
-	const LANDMARK_ROUTE_106          ; 05
+	const LANDMARK_ROUTE_105         ; 04
+	const LANDMARK_ROUTE_106         ; 05
 	const LANDMARK_VIOLET_CITY       ; 06
 	const LANDMARK_SPROUT_TOWER      ; 07
-	const LANDMARK_ROUTE_107          ; 08
+	const LANDMARK_ROUTE_107         ; 08
 	const LANDMARK_RUINS_OF_ALPH     ; 09
 	const LANDMARK_UNION_CAVE        ; 0a
-	const LANDMARK_ROUTE_108          ; 0b
+	const LANDMARK_ROUTE_108         ; 0b
 	const LANDMARK_AZALEA_TOWN       ; 0c
 	const LANDMARK_SLOWPOKE_WELL     ; 0d
 	const LANDMARK_ILEX_FOREST       ; 0e
-	const LANDMARK_ROUTE_109          ; 0f
+	const LANDMARK_ROUTE_109         ; 0f
 	const LANDMARK_GOLDENROD_CITY    ; 10
 	const LANDMARK_RADIO_TOWER       ; 11
-	const LANDMARK_ROUTE_110          ; 12
+	const LANDMARK_ROUTE_110         ; 12
 	const LANDMARK_NATIONAL_PARK     ; 13
-	const LANDMARK_ROUTE_111          ; 14
-	const LANDMARK_ROUTE_112          ; 15
+	const LANDMARK_ROUTE_111         ; 14
+	const LANDMARK_ROUTE_112         ; 15
 	const LANDMARK_ECRUTEAK_CITY     ; 16
 	const LANDMARK_TIN_TOWER         ; 17
 	const LANDMARK_BURNED_TOWER      ; 18
-	const LANDMARK_ROUTE_113          ; 19
+	const LANDMARK_ROUTE_113         ; 19
 	const LANDMARK_ROUTE_39          ; 1a
 	const LANDMARK_OLIVINE_CITY      ; 1b
 	const LANDMARK_LIGHTHOUSE        ; 1c
 	const LANDMARK_BATTLE_TOWER      ; 1d
-	const LANDMARK_ROUTE_115          ; 1e
+	const LANDMARK_ROUTE_115         ; 1e
 	const LANDMARK_WHIRL_ISLANDS     ; 1f
-	const LANDMARK_ROUTE_116          ; 20
+	const LANDMARK_ROUTE_116         ; 20
 	const LANDMARK_CIANWOOD_CITY     ; 21
-	const LANDMARK_ROUTE_117          ; 22
+	const LANDMARK_ROUTE_117         ; 22
 	const LANDMARK_MT_MORTAR         ; 23
 	const LANDMARK_MAHOGANY_TOWN     ; 24
-	const LANDMARK_ROUTE_118          ; 25
+	const LANDMARK_ROUTE_118         ; 25
 	const LANDMARK_LAKE_OF_RAGE      ; 26
-	const LANDMARK_ROUTE_44          ; 27
+	const LANDMARK_ROUTE_119         ; 27
 	const LANDMARK_ICE_PATH          ; 28
 	const LANDMARK_BLACKTHORN_CITY   ; 29
 	const LANDMARK_DRAGONS_DEN       ; 2a
-	const LANDMARK_ROUTE_120          ; 2b
+	const LANDMARK_ROUTE_120         ; 2b
 	const LANDMARK_DARK_CAVE         ; 2c
-	const LANDMARK_ROUTE_121          ; 2d
+	const LANDMARK_ROUTE_121         ; 2d
 	const LANDMARK_SILVER_CAVE       ; 2e
 	const LANDMARK_ROUTE_122         ; new
+	const LANDMARK_ROUTE_123         ; new
+	const LANDMARK_ELDERFERN_TOWN    ; new
 DEF KANTO_LANDMARK EQU const_value   ; numbers below are shifted because of new landmarks
 	const LANDMARK_PALLET_TOWN       ; 2f
 	const LANDMARK_ROUTE_1           ; 30

@@ -1601,7 +1601,7 @@ JohtoGrassWildMons:
 	dbw 17, VENOMOTH
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_44
+	def_grass_wildmons ROUTE_119
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 23, TANGELA

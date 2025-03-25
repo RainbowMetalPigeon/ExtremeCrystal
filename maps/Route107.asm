@@ -16,15 +16,15 @@
 
 Route107_MapScripts:
 	def_scene_scripts
-	scene_script Route107Noop1Scene, SCENE_ROUTE107_COOLTRAINER_M_BLOCKS
+;	scene_script Route107Noop1Scene, SCENE_ROUTE107_COOLTRAINER_M_BLOCKS ; edited away
 	scene_script Route107Noop2Scene, SCENE_ROUTE107_OFFER_SLOWPOKETAIL
 	scene_script Route107Noop3Scene, SCENE_ROUTE107_NOOP
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, Route107FriedaCallback
 
-Route107Noop1Scene:
-	end
+;Route107Noop1Scene: ; edited away
+;	end
 
 Route107Noop2Scene:
 	end
@@ -42,22 +42,13 @@ Route107FriedaCallback:
 	appear ROUTE107_FRIEDA
 	endcallback
 
-Route107CooltrainerMScript:
+Route107CooltrainerMScript: ; edited
 	faceplayer
-Route107CooltrainerMContinueScene:
 	opentext
 	checkevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_107
 	iftrue .GotMiracleSeed
-	checkflag ENGINE_ZEPHYRBADGE
-	iffalse .DontHaveZephyrBadge
-	checkevent EVENT_GOT_WYNAUT_EGG_FROM_MX_POKEMON ; edited
+	checkevent EVENT_GOT_WYNAUT_EGG_FROM_MX_POKEMON
 	iftrue .GiveMiracleSeed
-	writetext Route107CooltrainerMText_AideIsWaiting
-	waitbutton
-	closetext
-	end
-
-.GoToSproutTower: ; unreferenced
 	writetext Route107CooltrainerMText_UnusedSproutTower
 	waitbutton
 	closetext
@@ -71,33 +62,11 @@ Route107CooltrainerMContinueScene:
 	setevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_107
 	sjump .GotMiracleSeed
 
-.DontHaveZephyrBadge:
-	writetext Route107CooltrainerMText_VioletGym
-	waitbutton
-	closetext
-	end
-
 .GotMiracleSeed:
 	writetext Route107CooltrainerMText_ExperiencesShouldBeUseful
 	waitbutton
 .BagFull:
 	closetext
-	end
-
-Route107CooltrainerMStopsYouScene:
-	turnobject ROUTE107_COOLTRAINER_M, LEFT
-	turnobject PLAYER, RIGHT
-	opentext
-	writetext Route107CooltrainerMText_WhatsTheHurry
-	waitbutton
-	closetext
-	follow PLAYER, ROUTE107_COOLTRAINER_M
-	applymovement PLAYER, Movement_Route107CooltrainerMPushesYouBackToViolet
-	stopfollow
-	turnobject PLAYER, DOWN
-	scall Route107CooltrainerMContinueScene
-	applymovement ROUTE107_COOLTRAINER_M, Movement_Route107CooltrainerMReset1
-	applymovement ROUTE107_COOLTRAINER_M, Movement_Route107CooltrainerMReset2
 	end
 
 Route107RoarTMGuyScript:
@@ -500,6 +469,9 @@ Route107RuinsSign:
 Route107UnionCaveSign:
 	jumptext Route107UnionCaveSignText
 
+Route107GateRoute123Sign: ; new
+	jumptext Route107GateRoute123SignText
+
 Route107PokecenterSign:
 	jumpstd PokecenterSignScript
 
@@ -522,25 +494,6 @@ Movement_Route107CooltrainerMReset2:
 	step RIGHT
 	step_end
 
-Route107CooltrainerMText_WhatsTheHurry:
-	text "Wait up!"
-	line "What's the hurry?"
-	done
-
-Route107CooltrainerMText_AideIsWaiting:
-	text "<PLAYER>, right?"
-	line "Some guy wearing"
-
-	para "glasses was look-"
-	line "ing for you."
-
-	para "See for yourself."
-	line "He's waiting for"
-
-	para "you at the #MON"
-	line "CENTER."
-	done
-
 Route107CooltrainerMText_UnusedSproutTower:
 	text "Have you gone to"
 	line "SPROUT TOWER?"
@@ -555,20 +508,6 @@ Route107CooltrainerMText_UnusedSproutTower:
 	line "trainers. Go to"
 	cont "SPROUT TOWER!"
 	done
-
-Route107CooltrainerMText_VioletGym:
-	text "Have you gone to"
-	line "the #MON GYM?"
-
-	para "You can test your"
-	line "#MON and your-"
-	cont "self there."
-
-	para "It's a rite of"
-	line "passage for all"
-	cont "trainers!"
-	done
-
 Route107CooltrainerMText_HaveThisSeed:
 	text "You have some good"
 	line "#MON there."
@@ -590,7 +529,7 @@ Route107CooltrainerMText_HaveThisSeed:
 	cont "this."
 
 	para "It increases the"
-	line "power of grass-"
+	line "power of GRASS-"
 	cont "type moves."
 	done
 
@@ -920,6 +859,10 @@ Route107UnionCaveSignText:
 	line "AHEAD"
 	done
 
+Route107GateRoute123SignText: ; new
+	text "ROUTE 123 AHEAD"
+	done
+
 Route107_MapEvents:
 	db 0, 0 ; filler
 
@@ -928,9 +871,11 @@ Route107_MapEvents:
 	warp_event  4,  2, ROUTE_107_RUINS_OF_ALPH_GATE, 3
 	warp_event  4,  3, ROUTE_107_RUINS_OF_ALPH_GATE, 4
 	warp_event  6, 79, UNION_CAVE_1F, 4
+	warp_event  0, 48, ROUTE_107_ROUTE_123_GATE, 3 ; new
+	warp_event  0, 49, ROUTE_107_ROUTE_123_GATE, 4 ; new
 
 	def_coord_events
-	coord_event 18,  8, SCENE_ROUTE107_COOLTRAINER_M_BLOCKS, Route107CooltrainerMStopsYouScene
+;	coord_event 18,  8, SCENE_ROUTE107_COOLTRAINER_M_BLOCKS, Route107CooltrainerMStopsYouScene ; edited away
 	coord_event  7, 71, SCENE_ROUTE107_OFFER_SLOWPOKETAIL, Route107WannaBuyASlowpokeTailScript
 
 	def_bg_events
@@ -940,6 +885,7 @@ Route107_MapEvents:
 	bg_event 12, 73, BGEVENT_READ, Route107PokecenterSign
 	bg_event 12, 67, BGEVENT_ITEM, Route107HiddenGreatBall
 	bg_event 11, 40, BGEVENT_ITEM, Route107HiddenSuperPotion
+	bg_event  0, 46, BGEVENT_READ, Route107GateRoute123Sign ; new
 
 	def_object_events
 	object_event  8, 49, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherJustin, -1

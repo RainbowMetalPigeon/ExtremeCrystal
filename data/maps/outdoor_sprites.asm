@@ -31,6 +31,8 @@ OutdoorSprites:
 	dw NewBarkGroupSprites
 	dw SaffronGroupSprites
 	dw CherrygroveGroupSprites
+; new
+	dw ElderFernGroupSprites
 	assert_table_length NUM_MAP_GROUPS
 
 ; Route1 and ViridianCity are connected
@@ -120,6 +122,7 @@ IndigoGroupSprites:
 ; Route104 and CherrygroveCity are connected
 NewBarkGroupSprites:
 ; Route101, Route102, Route104, NewBarkTown
+; Route122 ; new
 CherrygroveGroupSprites:
 ; Route105, Route106, CherrygroveCity
 	db SPRITE_RIVAL
@@ -141,6 +144,7 @@ CherrygroveGroupSprites:
 ; Route112 and EcruteakCity are connected
 VioletGroupSprites:
 ; Route107, Route110, Route111, Route112, VioletCity
+; Route123 ; new
 EcruteakGroupSprites:
 ; EcruteakCity
 	db SPRITE_FISHER
@@ -292,4 +296,21 @@ FastShipGroupSprites:
 CableClubGroupSprites:
 ; (no outdoor maps)
 	; 0 of max 9 walking sprites
+	db 0 ; end
+
+; new
+
+ElderFernGroupSprites:
+; Route123, Route124, Route125, Route126, EldefernTown
+	db SPRITE_GRAMPS
+	db SPRITE_YOUNGSTER
+	db SPRITE_POKEFAN_M
+	db SPRITE_TEACHER
+	db SPRITE_ROCKET
+	db SPRITE_LASS
+	; x of max 9 walking sprites
+	db SPRITE_POKE_BALL
+	db SPRITE_FRUIT_TREE
+	db SPRITE_ROCK
+	db SPRITE_BOULDER
 	db 0 ; end

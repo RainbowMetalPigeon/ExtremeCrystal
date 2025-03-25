@@ -105,3 +105,9 @@
 ; group 26 (Cherrygrove)
 	RGB 31,14,28, 31,05,21 ; morn/day
 	RGB 14,07,17, 13,00,08 ; nite
+
+; new
+
+; group 27 (Elderfern) ; TBE
+	RGB 15,31,15, 15,28,31 ; morn/day
+	RGB 07,15,07, 07,13,17 ; nite

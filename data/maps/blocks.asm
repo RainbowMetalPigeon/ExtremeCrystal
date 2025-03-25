@@ -278,6 +278,7 @@ Route16Gate_Blocks:
 Route7SaffronGate_Blocks:
 Route17Route18Gate_Blocks:
 Route106VioletGate_Blocks:
+Route107Route123Gate_Blocks: ; new
 	INCBIN "maps/EastWestGate.blk"
 
 ;BetaAzaleaTown_Blocks: ; unreferenced
@@ -312,6 +313,12 @@ Route22_Blocks:
 
 Route122_Blocks: ; new
 	INCBIN "maps/Route122.blk"
+
+Route123_Blocks: ; new
+	INCBIN "maps/Route123.blk"
+
+ElderfernTown_Blocks: ; new
+	INCBIN "maps/ElderfernTown.blk"
 
 SECTION "Map Blocks 2", ROMX
 

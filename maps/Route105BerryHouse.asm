@@ -1,5 +1,5 @@
 	object_const_def
-	const ROUTE30BERRYHOUSE_POKEFAN_M
+	const ROUTE105BERRYHOUSE_POKEFAN_M
 
 Route105BerryHouse_MapScripts:
 	def_scene_scripts

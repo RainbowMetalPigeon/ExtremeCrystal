@@ -1,13 +1,13 @@
 	object_const_def
-	const ROUTE30_YOUNGSTER1
-	const ROUTE30_YOUNGSTER2
-	const ROUTE30_YOUNGSTER3
-	const ROUTE30_BUG_CATCHER
-	const ROUTE30_YOUNGSTER4
-	const ROUTE30_FRUIT_TREE1
-	const ROUTE30_FRUIT_TREE2
-	const ROUTE30_COOLTRAINER_F
-	const ROUTE30_POKE_BALL
+	const ROUTE105_YOUNGSTER1
+	const ROUTE105_YOUNGSTER2
+	const ROUTE105_YOUNGSTER3
+	const ROUTE105_BUG_CATCHER
+	const ROUTE105_YOUNGSTER4
+	const ROUTE105_FRUIT_TREE1
+	const ROUTE105_FRUIT_TREE2
+	const ROUTE105_COOLTRAINER_F
+	const ROUTE105_POKE_BALL
 
 Route105_MapScripts:
 	def_scene_scripts
@@ -22,15 +22,15 @@ Route105_MapScripts:
 ;	pause 30
 ;	closetext
 ;	playsound SFX_TACKLE
-;	applymovement ROUTE30_MONSTER2, Route105_JoeysRattataAttacksMovement
+;	applymovement ROUTE105_MONSTER2, Route105_JoeysRattataAttacksMovement
 ;	opentext
 ;	faceplayer
 ;	writetext Text_ThisIsABigBattle
 ;	waitbutton
-;	turnobject ROUTE30_YOUNGSTER1, UP
+;	turnobject ROUTE105_YOUNGSTER1, UP
 ;	closetext
 ;	playsound SFX_TACKLE
-;	applymovement ROUTE30_MONSTER1, Route105_MikeysRattataAttacksMovement
+;	applymovement ROUTE105_MONSTER1, Route105_MikeysRattataAttacksMovement
 ;	special RestartMapMusic
 ;	end
 

@@ -485,5 +485,8 @@ SECTION "Map Scripts 25", ROMX
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
 INCLUDE "maps/Route122.asm" ; new
+INCLUDE "maps/ElderfernTown.asm" ; new
+INCLUDE "maps/Route123.asm" ; new
+INCLUDE "maps/Route107Route123Gate.asm" ; new
 
 ENDSECTION

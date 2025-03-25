@@ -1,22 +1,22 @@
 	object_const_def
-	const ROUTE29_COOLTRAINER_M1
-	const ROUTE29_YOUNGSTER
-	const ROUTE29_TEACHER1
-	const ROUTE29_FRUIT_TREE
-	const ROUTE29_FISHER
-	const ROUTE29_COOLTRAINER_M2
-	const ROUTE29_TUSCANY
-	const ROUTE29_RIVAL ; new
-	const ROUTE29_OPAL_1 ; new
-	const ROUTE29_OPAL_2 ; new
-	const ROUTE29_POKE_BALL
+	const ROUTE104_COOLTRAINER_M1
+	const ROUTE104_YOUNGSTER
+	const ROUTE104_TEACHER1
+	const ROUTE104_FRUIT_TREE
+	const ROUTE104_FISHER
+	const ROUTE104_COOLTRAINER_M2
+	const ROUTE104_TUSCANY
+	const ROUTE104_RIVAL ; new
+	const ROUTE104_OPAL_1 ; new
+	const ROUTE104_OPAL_2 ; new
+	const ROUTE104_POKE_BALL
 
 Route104_MapScripts:
 	def_scene_scripts
-	scene_script Route104Noop1Scene, SCENE_ROUTE29_RIVAL_FACE_OFF ; new
-	scene_script Route104Noop2Scene, SCENE_ROUTE29_OPAL_BLOCKS_WAY ; new
-	scene_script Route104Noop3Scene, SCENE_ROUTE29_NOOP
-;	scene_script Route104Noop2Scene, SCENE_ROUTE29_CATCH_TUTORIAL
+	scene_script Route104Noop1Scene, SCENE_ROUTE104_RIVAL_FACE_OFF ; new
+	scene_script Route104Noop2Scene, SCENE_ROUTE104_OPAL_BLOCKS_WAY ; new
+	scene_script Route104Noop3Scene, SCENE_ROUTE104_NOOP
+;	scene_script Route104Noop2Scene, SCENE_ROUTE104_CATCH_TUTORIAL
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, Route104TuscanyCallback
@@ -35,19 +35,19 @@ Route104TuscanyCallback:
 	iftrue .DoesTuscanyAppear
 
 .TuscanyDisappears:
-	disappear ROUTE29_TUSCANY
+	disappear ROUTE104_TUSCANY
 	endcallback
 
 .DoesTuscanyAppear:
 	readvar VAR_WEEKDAY
 	ifnotequal TUESDAY, .TuscanyDisappears
-	appear ROUTE29_TUSCANY
+	appear ROUTE104_TUSCANY
 	endcallback
 
 ;Route104Tutorial1:
-;	turnobject ROUTE29_COOLTRAINER_M1, UP
-;	showemote EMOTE_SHOCK, ROUTE29_COOLTRAINER_M1, 15
-;	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData1a
+;	turnobject ROUTE104_COOLTRAINER_M1, UP
+;	showemote EMOTE_SHOCK, ROUTE104_COOLTRAINER_M1, 15
+;	applymovement ROUTE104_COOLTRAINER_M1, DudeMovementData1a
 ;	turnobject PLAYER, LEFT
 ;	setevent EVENT_DUDE_TALKED_TO_YOU
 ;	opentext
@@ -55,24 +55,24 @@ Route104TuscanyCallback:
 ;	yesorno
 ;	iffalse Script_RefusedTutorial1
 ;	closetext
-;	follow ROUTE29_COOLTRAINER_M1, PLAYER
-;	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData1b
+;	follow ROUTE104_COOLTRAINER_M1, PLAYER
+;	applymovement ROUTE104_COOLTRAINER_M1, DudeMovementData1b
 ;	stopfollow
 ;	loadwildmon RATTATA, 5
 ;	catchtutorial BATTLETYPE_TUTORIAL
-;	turnobject ROUTE29_COOLTRAINER_M1, UP
+;	turnobject ROUTE104_COOLTRAINER_M1, UP
 ;	opentext
 ;	writetext CatchingTutorialDebriefText
 ;	waitbutton
 ;	closetext
-;	setscene SCENE_ROUTE29_NOOP
+;	setscene SCENE_ROUTE104_NOOP
 ;	setevent EVENT_LEARNED_TO_CATCH_POKEMON
 ;	end
 
 ;Route104Tutorial2:
-;	turnobject ROUTE29_COOLTRAINER_M1, UP
-;	showemote EMOTE_SHOCK, ROUTE29_COOLTRAINER_M1, 15
-;	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData2a
+;	turnobject ROUTE104_COOLTRAINER_M1, UP
+;	showemote EMOTE_SHOCK, ROUTE104_COOLTRAINER_M1, 15
+;	applymovement ROUTE104_COOLTRAINER_M1, DudeMovementData2a
 ;	turnobject PLAYER, LEFT
 ;	setevent EVENT_DUDE_TALKED_TO_YOU
 ;	opentext
@@ -80,17 +80,17 @@ Route104TuscanyCallback:
 ;	yesorno
 ;	iffalse Script_RefusedTutorial2
 ;	closetext
-;	follow ROUTE29_COOLTRAINER_M1, PLAYER
-;	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData2b
+;	follow ROUTE104_COOLTRAINER_M1, PLAYER
+;	applymovement ROUTE104_COOLTRAINER_M1, DudeMovementData2b
 ;	stopfollow
 ;	loadwildmon RATTATA, 5
 ;	catchtutorial BATTLETYPE_TUTORIAL
-;	turnobject ROUTE29_COOLTRAINER_M1, UP
+;	turnobject ROUTE104_COOLTRAINER_M1, UP
 ;	opentext
 ;	writetext CatchingTutorialDebriefText
 ;	waitbutton
 ;	closetext
-;	setscene SCENE_ROUTE29_NOOP
+;	setscene SCENE_ROUTE104_NOOP
 ;	setevent EVENT_LEARNED_TO_CATCH_POKEMON
 ;	end
 
@@ -98,16 +98,16 @@ Route104TuscanyCallback:
 ;	writetext CatchingTutorialDeclinedText
 ;	waitbutton
 ;	closetext
-;	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData1b
-;	setscene SCENE_ROUTE29_NOOP
+;	applymovement ROUTE104_COOLTRAINER_M1, DudeMovementData1b
+;	setscene SCENE_ROUTE104_NOOP
 ;	end
 
 ;Script_RefusedTutorial2:
 ;	writetext CatchingTutorialDeclinedText
 ;	waitbutton
 ;	closetext
-;	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData2b
-;	setscene SCENE_ROUTE29_NOOP
+;	applymovement ROUTE104_COOLTRAINER_M1, DudeMovementData2b
+;	setscene SCENE_ROUTE104_NOOP
 ;	end
 
 CatchingTutorialDudeScript:
@@ -143,16 +143,16 @@ CatchingTutorialDudeScript:
 ;	end
 
 Route104RivalFaceOff: ; new
-	turnobject ROUTE29_RIVAL, DOWN
+	turnobject ROUTE104_RIVAL, DOWN
 	pause 7
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	showemote EMOTE_SHOCK, PLAYER, 15
 	simpletext Route104RivalText1
-	applymovement ROUTE29_RIVAL, Route104_RivalMovement1
+	applymovement ROUTE104_RIVAL, Route104_RivalMovement1
 	simpletext Route104RivalText2
 ; start the battle
 	winlosstext RivalRoute104WinText, RivalRoute104LossText
-	setlasttalked ROUTE29_RIVAL
+	setlasttalked ROUTE104_RIVAL
 	loadtrainer RIVAL1, RIVAL1_1
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
@@ -168,28 +168,28 @@ Route104RivalFaceOff: ; new
 	playmusic MUSIC_RIVAL_AFTER
 	simpletext Route104RivalText_YouLost
 .FinishRival:
-	applymovement ROUTE29_RIVAL, Route104_RivalMovement2
-	disappear ROUTE29_RIVAL
+	applymovement ROUTE104_RIVAL, Route104_RivalMovement2
+	disappear ROUTE104_RIVAL
 	special HealParty
 	playmapmusic
 ; Opal arrival
-	appear ROUTE29_OPAL_1
+	appear ROUTE104_OPAL_1
 	pause 10
 	simpletext Route104Opal1Text1
 	showemote EMOTE_SHOCK, PLAYER, 15
 	turnobject PLAYER, RIGHT
-	applymovement ROUTE29_OPAL_1, Route104_Opal1Movement1
+	applymovement ROUTE104_OPAL_1, Route104_Opal1Movement1
 	turnobject PLAYER, DOWN
-	applymovement ROUTE29_OPAL_1, Route104_Opal1Movement2
+	applymovement ROUTE104_OPAL_1, Route104_Opal1Movement2
 ; Opal goes searching for Silver
 	simpletext Route104Opal1Text2
 	applymovement PLAYER, Route104_PlayerMovesAwayMovement1
-	applymovement ROUTE29_OPAL_1, Route104_Opal1Movement3
-	disappear ROUTE29_OPAL_1
-	setscene SCENE_ROUTE29_OPAL_BLOCKS_WAY
+	applymovement ROUTE104_OPAL_1, Route104_Opal1Movement3
+	disappear ROUTE104_OPAL_1
+	setscene SCENE_ROUTE104_OPAL_BLOCKS_WAY
 	setmapscene ELMS_LAB, SCENE_ELMSLAB_MEET_OFFICER
 	clearevent EVENT_COP_IN_ELMS_LAB
-	appear ROUTE29_OPAL_2
+	appear ROUTE104_OPAL_2
 ; end of Opal part
 	end
 
@@ -288,8 +288,8 @@ Route104_Opal1Movement3:
 	step_end
 
 Route104OpalBlocksWay: ; new
-	turnobject ROUTE29_OPAL_2, RIGHT
-	showemote EMOTE_SHOCK, ROUTE29_OPAL_2, 15
+	turnobject ROUTE104_OPAL_2, RIGHT
+	showemote EMOTE_SHOCK, ROUTE104_OPAL_2, 15
 	simpletext Route104OpalBlocksWayText
 	applymovement PLAYER, Route104_OpalBlocksWayPlayerMovement
 	end
@@ -590,11 +590,11 @@ Route104_MapEvents:
 	warp_event 27,  1, ROUTE_104_ROUTE_121_GATE, 3
 
 	def_coord_events
-;	coord_event 53,  8, SCENE_ROUTE29_CATCH_TUTORIAL, Route104Tutorial1
-;	coord_event 53,  9, SCENE_ROUTE29_CATCH_TUTORIAL, Route104Tutorial2
-	coord_event 31, 13, SCENE_ROUTE29_RIVAL_FACE_OFF, Route104RivalFaceOff ; new
-	coord_event 30,  6, SCENE_ROUTE29_OPAL_BLOCKS_WAY, Route104OpalBlocksWay ; new
-	coord_event 30,  7, SCENE_ROUTE29_OPAL_BLOCKS_WAY, Route104OpalBlocksWay ; new
+;	coord_event 53,  8, SCENE_ROUTE104_CATCH_TUTORIAL, Route104Tutorial1
+;	coord_event 53,  9, SCENE_ROUTE104_CATCH_TUTORIAL, Route104Tutorial2
+	coord_event 31, 13, SCENE_ROUTE104_RIVAL_FACE_OFF, Route104RivalFaceOff ; new
+	coord_event 30,  6, SCENE_ROUTE104_OPAL_BLOCKS_WAY, Route104OpalBlocksWay ; new
+	coord_event 30,  7, SCENE_ROUTE104_OPAL_BLOCKS_WAY, Route104OpalBlocksWay ; new
 
 	def_bg_events
 	bg_event 51,  7, BGEVENT_READ, Route104Sign1

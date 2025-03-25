@@ -11,7 +11,7 @@
 	const ROUTE120_POKE_BALL2
 	const ROUTE120_POKE_BALL3
 	const ROUTE120_POKE_BALL4
-	const ROUTE45_YOUNGSTER
+	const ROUTE120_YOUNGSTER
 
 Route120_MapScripts:
 	def_scene_scripts
