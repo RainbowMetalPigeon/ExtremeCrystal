@@ -565,8 +565,8 @@ PokegearMap_KantoMap:
 	call TownMap_GetKantoLandmarkLimits
 	jr PokegearMap_ContinueMap
 
-PokegearMap_JohtoMap: ; to be edited when adding a new map AFTER Silve Cave
-	ld d, LANDMARK_ROUTE_122 ; edited, was LANDMARK_SILVER_CAVE
+PokegearMap_JohtoMap: ; to be edited when adding a new map AFTER Silver Cave
+	ld d, LANDMARK_ELDERFERN_TOWN ; edited, was LANDMARK_SILVER_CAVE
 	ld e, LANDMARK_NEW_BARK_TOWN
 PokegearMap_ContinueMap:
 	ld hl, hJoyLast
@@ -2157,11 +2157,11 @@ TownMapBubble:
 ;	call ByteFill
 
 ; Bottom-left corner
-;	hlcoord 1, 2
+	hlcoord 0, 1 ; edited
 	ld a, $32
 	ld [hli], a
 ; Bottom row
-	ld bc, 18 ; edited to remove the border from the town map, was 16
+	ld bc, 16 ; edited to remove the border from the town map, was 18 (?)
 	ld a, " "
 	call ByteFill
 ; Bottom-right corner
@@ -2266,7 +2266,7 @@ FlyMap:
 	ld c, a
 	call GetWorldMapLocation
 .CheckRegion:
-; The first 46 locations are part of Johto. The rest are in Kanto.
+; The first locations are part of Johto. The rest are in Kanto.
 	cp KANTO_LANDMARK
 	jr nc, .KantoFlyMap
 ; Johto fly map

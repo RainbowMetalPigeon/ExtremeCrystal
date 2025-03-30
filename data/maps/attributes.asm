@@ -706,7 +706,7 @@ ENDM
 	map_attributes ElderfernTown, ELDERFERN_TOWN, $71, EAST
 	connection east, Route123, ROUTE_123, 5
 
-	map_attributes Route123, ROUTE_123, $05, WEST, EAST
+	map_attributes Route123, ROUTE_123, $05, WEST | EAST
 	connection west, ElderfernTown, ELDERFERN_TOWN, -5
 	connection east, Route107, ROUTE_107, -19
 
