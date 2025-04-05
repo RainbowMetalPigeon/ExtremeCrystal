@@ -111,6 +111,7 @@ MeetMomScript:
 	giveitem HM_WHIRLPOOL
 	giveitem HM_WATERFALL
 	giveitem TM_ROCK_SMASH, 99
+	giveitem SQUIRTBOTTLE
 
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD

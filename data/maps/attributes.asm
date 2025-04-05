@@ -181,18 +181,20 @@ ENDM
 	connection north, GoldenrodCity, GOLDENROD_CITY, -5
 	connection east, AzaleaTown, AZALEA_TOWN, 18
 
-	map_attributes Route110, ROUTE_110, $05, NORTH | SOUTH
-	connection north, Route111, ROUTE_111, 0
-	connection south, GoldenrodCity, GOLDENROD_CITY, -5
+; NORTH | SOUTH | WEST | EAST
 
-	map_attributes Route111, ROUTE_111, $05, NORTH | SOUTH | EAST
-	connection north, Route112, ROUTE_112, 10
-	connection south, Route110, ROUTE_110, 0
+	map_attributes Route110, ROUTE_110, $05, SOUTH | EAST
+	connection south, GoldenrodCity, GOLDENROD_CITY, -5
+	connection east, Route111, ROUTE_111, 0 ; edited
+
+	map_attributes Route111, ROUTE_111, $05, NORTH | WEST | EAST
+	connection north, Route112, ROUTE_112, 0; edited
+	connection west, Route110, ROUTE_110, 0 ; edited
 	connection east, VioletCity, VIOLET_CITY, 0
 
 	map_attributes Route112, ROUTE_112, $05, NORTH | SOUTH
 	connection north, EcruteakCity, ECRUTEAK_CITY, -5
-	connection south, Route111, ROUTE_111, -10
+	connection south, Route111, ROUTE_111, 0; edited
 
 	map_attributes Route113, ROUTE_113, $05, WEST | EAST
 	connection west, Route114, ROUTE_39, 0

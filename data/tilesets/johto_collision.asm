@@ -153,3 +153,4 @@
 	tilecoll WALL, WALL, WALL, WALL ; 98
 	tilecoll WALL, WALL, WALL, WALL ; 99
 	tilecoll WALL, WALL, WALL, WALL ; 9a
+	tilecoll WALL, HOP_LEFT, FLOOR, FLOOR ; 9b

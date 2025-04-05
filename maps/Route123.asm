@@ -2,6 +2,9 @@
 	const ROUTE123_ROCK1
 	const ROUTE123_ROCK2
 	const ROUTE123_ROCK3
+	const ROUTE123_ROCK4
+	const ROUTE123_BOULDER1
+	const ROUTE123_BOULDER2
 ;	const ROUTE123_POKEFAN_M
 ;	const ROUTE123_LASS
 ;	const ROUTE123_FRUIT_TREE
@@ -13,6 +16,9 @@ Route123_MapScripts:
 
 Route123Rock:
 	jumpstd SmashRockScript
+
+Route123Boulder:
+	jumpstd StrengthBoulderScript
 
 ;Route123LassScript:
 ;	jumptextfaceplayer Route123LassText
@@ -69,6 +75,9 @@ Route123_MapEvents:
 	def_object_events
 	object_event 19,  8, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route123Rock, -1
 	object_event 18,  9, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route123Rock, -1
-	object_event  3,  2, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route123Rock, -1
+	object_event  2,  5, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route123Rock, -1
+	object_event  3,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route123Rock, -1
+	object_event  8,  6, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route123Boulder, -1
+	object_event  9,  5, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route123Boulder, -1
 	object_event 18,  5, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route123FruitTree, -1
 ;	object_event 13, 16, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route123LassScript, -1

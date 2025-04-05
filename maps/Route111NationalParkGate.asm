@@ -854,8 +854,8 @@ Route111NationalParkGate_MapEvents:
 	def_warp_events
 	warp_event  0,  4, NATIONAL_PARK, 1
 	warp_event  0,  5, NATIONAL_PARK, 2
-	warp_event  9,  4, ROUTE_111, 1
-	warp_event  9,  5, ROUTE_111, 2
+	warp_event  9,  4, ROUTE_110, 4 ; edited
+	warp_event  9,  5, ROUTE_110, 5 ; edited
 
 	def_coord_events
 
