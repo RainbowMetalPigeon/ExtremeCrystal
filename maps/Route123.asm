@@ -5,9 +5,9 @@
 	const ROUTE123_ROCK4
 	const ROUTE123_BOULDER1
 	const ROUTE123_BOULDER2
+	const ROUTE123_FRUIT_TREE
 ;	const ROUTE123_POKEFAN_M
 ;	const ROUTE123_LASS
-;	const ROUTE123_FRUIT_TREE
 
 Route123_MapScripts:
 	def_scene_scripts
@@ -23,8 +23,11 @@ Route123Boulder:
 ;Route123LassScript:
 ;	jumptextfaceplayer Route123LassText
 
-Route123Sign:
-	jumptext Route123SignText
+Route123Sign1:
+	jumptext Route123Sign1Text
+
+Route123Sign2:
+	jumptext Route123Sign2Text
 
 Route123FruitTree:
 	fruittree FRUITTREE_ROUTE_123
@@ -53,11 +56,19 @@ Route123FruitTree:
 ;	line "outside."
 ;	done
 
-Route123SignText:
+Route123Sign1Text:
 	text "ROUTE 123"
 	
 	para "ROUTE 107 -"
 	line "ELDERFERN TOWN"
+	done
+
+Route123Sign2Text:
+	text "ROUTE 123"
+	
+	para "ELDERFERN TOWN -"
+;	xxxx "123456789012345678"
+	line "ROUTE 107"
 	done
 
 Route123_MapEvents:
@@ -70,7 +81,8 @@ Route123_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 20, 12, BGEVENT_READ, Route123Sign
+	bg_event 20, 12, BGEVENT_READ, Route123Sign1
+	bg_event  2, 10, BGEVENT_READ, Route123Sign2
 
 	def_object_events
 	object_event 19,  8, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route123Rock, -1

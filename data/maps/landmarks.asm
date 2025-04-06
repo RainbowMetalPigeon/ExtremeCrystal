@@ -56,6 +56,9 @@ Landmarks:
 	landmark 148,  68, SilverCaveName
 	landmark 140, 124, Route122Name ; new
 	landmark  76,  92, Route123Name ; new
+	landmark  68, 108, Route124Name ; new
+	landmark  60,  92, Route125Name ; new
+	landmark  68,  76, Route126Name ; new
 	landmark  68,  92, ElderfernTownName ; new
 
 	assert_table_length KANTO_LANDMARK
@@ -217,4 +220,7 @@ SpecialMapName:      db "SPECIAL@"
 
 Route122Name:        db "ROUTE 122@"
 Route123Name:        db "ROUTE 123@"
+Route124Name:        db "ROUTE 124@"
+Route125Name:        db "ROUTE 125@"
+Route126Name:        db "ROUTE 126@"
 ElderfernTownName:   db "ELDERFERN<BSP>TOWN@"

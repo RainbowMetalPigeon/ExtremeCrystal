@@ -212,6 +212,8 @@ Route115BattleTowerGate_Blocks:
 Route2Gate_Blocks:
 Route104Route121Gate_Blocks:
 Route5SaffronGate_Blocks:
+AzaleaTownRoute124Gate_Blocks: ; new
+Route111Route126Gate_Blocks: ; new
 	INCBIN "maps/NorthSouthGate.blk"
 
 ;BetaEcruteakCity_Blocks: ; unreferenced
@@ -279,6 +281,7 @@ Route7SaffronGate_Blocks:
 Route17Route18Gate_Blocks:
 Route106VioletGate_Blocks:
 Route107Route123Gate_Blocks: ; new
+GoldenrodCityRoute125Gate_Blocks: ; new
 	INCBIN "maps/EastWestGate.blk"
 
 ;BetaAzaleaTown_Blocks: ; unreferenced
@@ -316,6 +319,15 @@ Route122_Blocks: ; new
 
 Route123_Blocks: ; new
 	INCBIN "maps/Route123.blk"
+
+Route124_Blocks: ; new
+	INCBIN "maps/Route124.blk"
+
+Route125_Blocks: ; new
+	INCBIN "maps/Route125.blk"
+
+Route126_Blocks: ; new
+	INCBIN "maps/Route126.blk"
 
 ElderfernTown_Blocks: ; new
 	INCBIN "maps/ElderfernTown.blk"

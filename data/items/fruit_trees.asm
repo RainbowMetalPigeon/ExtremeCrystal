@@ -33,4 +33,7 @@ FruitTreeItems:
 	db BURNT_BERRY  ; FUCHSIA_CITY
 ; new
 	db BERRY ; ROUTE_123
+	db BERRY ; ROUTE_124
+	db BERRY ; ROUTE_125
+	db BERRY ; ROUTE_126
 	assert_table_length NUM_FRUIT_TREES

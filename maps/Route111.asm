@@ -661,6 +661,8 @@ Route111_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event 15, 15, ROUTE_111_ROUTE_126_GATE, 1 ; new
+	warp_event 16, 15, ROUTE_111_ROUTE_126_GATE, 2 ; new
 	warp_event 27, 13, ROUTE_111_RUINS_OF_ALPH_GATE, 1
 	warp_event 28, 13, ROUTE_111_RUINS_OF_ALPH_GATE, 2
 

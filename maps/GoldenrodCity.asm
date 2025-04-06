@@ -267,6 +267,9 @@ GoldenrodCityPokecenterSign:
 GoldenrodCityFlowerShopSign:
 	jumptext GoldenrodCityFlowerShopSignText
 
+GoldenrodCityRoute125GateSign: ; new
+	jumptext GoldenrodCityRoute125GateSignText
+
 GoldenrodCityMoveTutorEnterGameCornerMovement:
 	step RIGHT
 	step RIGHT
@@ -486,6 +489,10 @@ GoldenrodCityFlowerShopSignText:
 	line "FLOWER SHOP"
 	done
 
+GoldenrodCityRoute125GateSignText: ; new
+	text "ROUTE 125 AHEAD"
+	done
+
 GoldenrodCityMoveTutorAskTeachAMoveText:
 	text "I can teach your"
 	line "#MON amazing"
@@ -567,6 +574,8 @@ GoldenrodCity_MapEvents:
 	warp_event  9,  5, GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, 8
 	warp_event 11, 29, GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, 5
 	warp_event 15, 27, GOLDENROD_POKECENTER_1F, 1
+	warp_event 33, 24, GOLDENROD_CITY_ROUTE_125_GATE, 1 ; new
+	warp_event 33, 25, GOLDENROD_CITY_ROUTE_125_GATE, 2 ; new
 
 	def_coord_events
 
@@ -583,6 +592,7 @@ GoldenrodCity_MapEvents:
 	bg_event 12, 30, BGEVENT_READ, GoldenrodCityUndergroundSignSouth
 	bg_event 16, 27, BGEVENT_UP, GoldenrodCityPokecenterSign
 	bg_event 30,  6, BGEVENT_READ, GoldenrodCityFlowerShopSign
+	bg_event 32, 23, BGEVENT_READ, GoldenrodCityRoute125GateSign ; new
 
 	def_object_events
 	object_event  7, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityPokefanMScript, EVENT_GOLDENROD_CITY_CIVILIANS

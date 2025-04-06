@@ -488,5 +488,10 @@ INCLUDE "maps/Route122.asm" ; new
 INCLUDE "maps/ElderfernTown.asm" ; new
 INCLUDE "maps/Route123.asm" ; new
 INCLUDE "maps/Route107Route123Gate.asm" ; new
-
+INCLUDE "maps/Route124.asm" ; new
+INCLUDE "maps/AzaleaTownRoute124Gate.asm" ; new
+INCLUDE "maps/Route125.asm" ; new
+INCLUDE "maps/GoldenrodCityRoute125Gate.asm" ; new
+INCLUDE "maps/Route126.asm" ; new
+INCLUDE "maps/Route111Route126Gate.asm" ; new
 ENDSECTION

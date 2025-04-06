@@ -110,7 +110,8 @@ ENDM
 	connection west, Route111, ROUTE_111, 0
 	connection east, Route106, ROUTE_106, 9
 
-	map_attributes AzaleaTown, AZALEA_TOWN, $05, WEST | EAST
+	map_attributes AzaleaTown, AZALEA_TOWN, $05, NORTH | WEST | EAST
+	connection north, Route124, ROUTE_124, 6 ; new
 	connection west, Route109, ROUTE_109, -18
 	connection east, Route108, ROUTE_108, 0
 
@@ -187,8 +188,9 @@ ENDM
 	connection south, GoldenrodCity, GOLDENROD_CITY, -5
 	connection east, Route111, ROUTE_111, 0 ; edited
 
-	map_attributes Route111, ROUTE_111, $05, NORTH | WEST | EAST
+	map_attributes Route111, ROUTE_111, $05, NORTH | SOUTH | WEST | EAST
 	connection north, Route112, ROUTE_112, 0; edited
+	connection south, Route126, ROUTE_126, 3; new
 	connection west, Route110, ROUTE_110, 0 ; edited
 	connection east, VioletCity, VIOLET_CITY, 0
 
@@ -705,13 +707,30 @@ ENDM
 	map_attributes Route122, ROUTE_122, $35, NORTH
 	connection north, NewBarkTown, NEW_BARK_TOWN, 2
 
-	map_attributes ElderfernTown, ELDERFERN_TOWN, $71, EAST
+	map_attributes ElderfernTown, ELDERFERN_TOWN, $71, NORTH | SOUTH | WEST | EAST
+	connection north, Route126, ROUTE_126, 4
+	connection south, Route124, ROUTE_124, 5
+	connection west, Route125, ROUTE_125, 4
 	connection east, Route123, ROUTE_123, 5
 
 	map_attributes Route123, ROUTE_123, $05, WEST | EAST
 	connection west, ElderfernTown, ELDERFERN_TOWN, -5
 	connection east, Route107, ROUTE_107, -19
 
+	map_attributes Route124, ROUTE_124, $05, NORTH | SOUTH
+	connection north, ElderfernTown, ELDERFERN_TOWN, -5
+	connection south, AzaleaTown, AZALEA_TOWN, -6
+
+	map_attributes Route125, ROUTE_125, $05, EAST
+	connection east, ElderfernTown, ELDERFERN_TOWN, -4
+
+	map_attributes Route126, ROUTE_126, $05, NORTH | SOUTH
+	connection north, Route111, ROUTE_111, -3
+	connection south, ElderfernTown, ELDERFERN_TOWN, -4
+
 ; new maps without connections
 
 	map_attributes Route107Route123Gate, ROUTE_107_ROUTE_123_GATE, $00, 0
+	map_attributes AzaleaTownRoute124Gate, AZALEA_TOWN_ROUTE_124_GATE, $00, 0
+	map_attributes GoldenrodCityRoute125Gate, GOLDENROD_CITY_ROUTE_125_GATE, $00, 0
+	map_attributes Route111Route126Gate, ROUTE_111_ROUTE_126_GATE, $00, 0

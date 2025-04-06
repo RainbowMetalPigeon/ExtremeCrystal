@@ -241,6 +241,9 @@ DEF EMOTE_LENGTH EQU 6
 	const FRUITTREE_FUCHSIA_CITY  ; 1e
 ; new
 	const FRUITTREE_ROUTE_123
+	const FRUITTREE_ROUTE_124
+	const FRUITTREE_ROUTE_125
+	const FRUITTREE_ROUTE_126
 DEF NUM_FRUIT_TREES EQU const_value - 1
 
 ; describedecoration arguments

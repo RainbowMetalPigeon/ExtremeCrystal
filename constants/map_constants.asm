@@ -508,10 +508,12 @@ ENDM
 	map_const ELDERFERN_TOWN,                              20, 18 ;  1
 	map_const ROUTE_123,                                   14,  9 ;  2
 	map_const ROUTE_107_ROUTE_123_GATE,                     5,  4 ;  3
-;	map_const ROUTE_124,                                   14,  9 ;  1
-;	map_const ROUTE_125,                                   14,  9 ;  1
-;	map_const ROUTE_126,                                   14,  9 ;  1
-;	map_const ELDERFERN_TOWN,                              14,  9 ;  1
+	map_const ROUTE_124,                                   10, 22 ;  4
+	map_const AZALEA_TOWN_ROUTE_124_GATE,                   5,  4 ;  5
+	map_const ROUTE_125,                                   14,  9 ;  6
+	map_const GOLDENROD_CITY_ROUTE_125_GATE,                5,  4 ;  7
+	map_const ROUTE_126,                                   10, 22 ;  8
+	map_const ROUTE_111_ROUTE_126_GATE,                     5,  4 ;  9
 	endgroup
 
 DEF NUM_MAP_GROUPS EQU const_value ; 26

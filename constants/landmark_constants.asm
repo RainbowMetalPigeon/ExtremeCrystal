@@ -50,6 +50,9 @@
 	const LANDMARK_SILVER_CAVE       ; 2e
 	const LANDMARK_ROUTE_122         ; new
 	const LANDMARK_ROUTE_123         ; new
+	const LANDMARK_ROUTE_124         ; new
+	const LANDMARK_ROUTE_125         ; new
+	const LANDMARK_ROUTE_126         ; new
 	const LANDMARK_ELDERFERN_TOWN    ; new
 DEF KANTO_LANDMARK EQU const_value   ; numbers below are shifted because of new landmarks
 	const LANDMARK_PALLET_TOWN       ; 2f
